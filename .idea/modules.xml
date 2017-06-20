@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/guardianAndroidTests.iml" filepath="$PROJECT_DIR$/.idea/modules/guardianAndroidTests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/guardianAndroidTests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/guardianAndroidTests_main.iml" group="guardianAndroidTests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/guardianAndroidTests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/guardianAndroidTests_test.iml" group="guardianAndroidTests" />
+    </modules>
+  </component>
+</project>
