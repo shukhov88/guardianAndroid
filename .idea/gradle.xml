@@ -5,8 +5,8 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/guardianAndroidTests" />
-        <option name="gradleHome" value="c:/Gradle/gradle-3.4.1" />
-        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="gradleHome" value="C:/Gradle/gradle-3.5" />
+        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/guardianAndroidTests" />
