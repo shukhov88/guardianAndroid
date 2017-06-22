@@ -51,6 +51,5 @@ public class FirstHelper extends BaseHelper {
         int fromX = (int) (scrSize.width * 0.20);
         int toX = (int) (scrSize.width * 0.20);
         wd.swipe(fromX, fromY, toX, toY, 600);
-
     }
 }
