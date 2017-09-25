@@ -1,7 +1,6 @@
 package by.oxagile.guardian.appmanager;
 
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -10,10 +9,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager {
+public class PatientManager {
 
-    AndroidDriver wd;
-    private FirstHelper firstHelper;
+    private AndroidDriver patientWD;
+    private PatientHelper patientHelper;
 
     public void init() throws IOException {
 
@@ -21,25 +20,31 @@ public class ApplicationManager {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-        capabilities.setCapability("deviceName", "My New Phone");
-        capabilities.setCapability("platformVersion", "6.0.1");
+        //SGS4 (my personal)
+        capabilities.setCapability("deviceName", "4d00e7d3b654a039");
+        capabilities.setCapability("platformVersion", "5.0.1");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("app", app.getAbsolutePath());
         capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
         capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
 
-        wd = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
-        wd.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
+        patientWD = new AndroidDriver(new URL("http://192.168.33.114:4444/wd/hub"),capabilities);
+        patientWD.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
 
-        firstHelper = new FirstHelper(wd);
+    }
 
+    public void test() throws InterruptedException {
+        Thread.sleep(5000);
     }
 
     public void stop() {
-        wd.quit();
+        patientWD.quit();
     }
 
-    public FirstHelper firstHelper() {
-        return firstHelper;
+    public PatientHelper patientHelper() {
+        if (patientHelper == null) {
+            patientHelper = new PatientHelper(patientWD);
+        }
+        return patientHelper;
     }
 }
