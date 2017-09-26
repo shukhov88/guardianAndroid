@@ -14,4 +14,6 @@ public class CallsTests extends TestBase {
 
         Assert.assertTrue(patient.patientHelper().isIncomingCallScreenPresent());
     }
+
+
 }

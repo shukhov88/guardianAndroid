@@ -16,16 +16,5 @@ public class CarerHelper extends BaseHelper {
         super(wd);
     }
 
-    public void makeCall(String contact) throws InterruptedException {
-        List<MobileElement> contactsList = wd.findElements(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name"));
-        for (int i = 0; i < contactsList.size(); i++) {
-            if (contactsList.get(i).getText().equals(contact)) {
-                contactsList.get(i).click();
-            }
-        }
-        wd.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")).click();
-        Thread.sleep(10000);
-    }
-
 
 }

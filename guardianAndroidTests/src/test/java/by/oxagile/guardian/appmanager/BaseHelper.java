@@ -1,9 +1,12 @@
 package by.oxagile.guardian.appmanager;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.util.List;
 
 
 public class BaseHelper {
@@ -82,10 +85,45 @@ public class BaseHelper {
         skipUberSignin();
     }
 
+    public void makeCall(String contact) throws InterruptedException {
+        List<MobileElement> contactsList = wd.findElements(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name"));
+        for (int i = 0; i < contactsList.size(); i++) {
+            if (contactsList.get(i).getText().equals(contact)) {
+                contactsList.get(i).click();
+            }
+        }
+        wd.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")).click();
+        //To implement wait in isIncomingCallScreenPresent() instead of Thread.sleep!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Thread.sleep(10000);
+    }
+
     public boolean isIncomingCallScreenPresent() {
         return wd.findElements(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget" +
                 ".LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget" +
                 ".FrameLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.ImageView")).size() == 1;
+    }
+
+    public void acceptCall() {
+        wd.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/ra_driver_status")).click();
+    }
+
+    public void declineCall() {
+        wd.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget" +
+                ".LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget" +
+                ".FrameLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.ImageView")).click();
+    }
+
+    public void leaveCall() {
+        wd.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_end_btn")).click();
+        wd.resetApp();
+    }
+
+    public String getIncomingCallName() {
+        return wd.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_name")).getText();
+    }
+
+    public String getOnCallName() {
+        return wd.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_name")).getText();
     }
 
 }
