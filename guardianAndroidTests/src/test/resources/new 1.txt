@@ -3,3 +3,11 @@ java -jar selenium-server-standalone-3.5.3.jar -port 4444 -role hub
 appium --nodeconfig c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\test\resources\SGS4.json -p 4725
 
 appium --nodeconfig c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\test\resources\SGS7.json -p 4730
+
+
+
+
+appium --nodeconfig c:\Users\shukhovvg\AssistTEST\src\test\resources\SGS4.json -p 4725 --default-capabilities "{\"udid\": \"4d00e7d3b654a039\"}"
+
+appium --nodeconfig c:\Users\shukhovvg\AssistTEST\src\test\resources\SGS7.json -p 4730 --default-capabilities "{\"udid\": \"ce12160cbab93cae0c\"}"
+

@@ -4,7 +4,7 @@
         {
           "browserName": "",
 		  "deviceName": "ce12160cbab93cae0c",
-          "version":"5.0.1",
+          "version":"6.0.1",
           "maxInstances": 3,
           "platform":"ANDROID"
         }
