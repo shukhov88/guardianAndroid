@@ -1,5 +1,6 @@
 build/
 .gradle
 workspace.xml
+src/test/resources
 **/*.apk
 **/*.properties
