@@ -47,5 +47,16 @@ public class HttpSession {
         return parsed.getAsJsonObject().get("token").getAsString();
     }
 
+    public String joinCall(String callID) throws IOException {
+        String json = Request.Get(assist.getProperty("environment.url") + "/v1/calls/" + callID + "/join")
+                .addHeader("Authorization", assist.getProperty("Assist.Token"))
+                .addHeader("Content-Type", "application/json")
+                .execute()
+                .returnContent()
+                .asString();
+
+        JsonElement parsed = new JsonParser().parse(json);
+        return parsed.getAsJsonObject().get("token").getAsString();
+    }
 
 }
