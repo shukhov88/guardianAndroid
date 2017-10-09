@@ -30,16 +30,16 @@ public class CarerManager {
         capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
 
         carerWD = new AndroidDriver(new URL("http://192.168.33.114:4444/wd/hub"),capabilities);
-        carerWD.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
+        carerWD.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-    }
-
-    public void test() throws InterruptedException {
-        Thread.sleep(5000);
     }
 
     public void stop() {
         carerWD.quit();
+    }
+
+    public void resetApp() {
+        carerWD.resetApp();
     }
 
     public CarerHelper carerHelper() {

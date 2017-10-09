@@ -89,17 +89,6 @@ public class BaseHelper {
         androidDriver.pressKeyCode(AndroidKeyCode.BACK);
     }
 
-    public void login(String mobile) throws InterruptedException {
-        acceptPermissions();
-        loginAs(mobile);
-        skipUberSignin();
-    }
-
-    public void loginWithoutPermissions(String mobile) throws InterruptedException {
-        loginAs(mobile);
-        skipUberSignin();
-    }
-
     public void makeCall(String contact) {
         List<MobileElement> contactsList = androidDriver.findElements(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name"));
         for (int i = 0; i < contactsList.size(); i++) {
@@ -108,6 +97,16 @@ public class BaseHelper {
             }
         }
         androidDriver.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")).click();
+    }
+
+    public boolean isElementPresent(By locator) {
+        WebDriverWait wait = new WebDriverWait(androidDriver, 10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        return androidDriver.findElements(locator).size() == 1;
+    }
+
+    public String getText(By locator) {
+        return androidDriver.findElement(locator).getText();
     }
 
     public boolean isIncomingCallScreenPresent() {

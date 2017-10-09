@@ -5,7 +5,9 @@ import by.oxagile.guardian.managers.CarerManager;
 import by.oxagile.guardian.managers.PatientManager;
 import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 public class TestBase {
 
@@ -17,16 +19,22 @@ public class TestBase {
 
     @BeforeSuite
     public void setUp() throws Exception {
-        patient.init();
+        //patient.init();
         carer.init();
         assist.init();
     }
 
     @AfterSuite
     public void tearDown() {
-        patient.stop();
+        //patient.stop();
         carer.stop();
         assist.stop();
+    }
+
+    @BeforeMethod
+    public void resetApp() {
+        //patient.resetApp();
+        carer.resetApp();
     }
 
 }

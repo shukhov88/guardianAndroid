@@ -10,8 +10,9 @@ public class CallsTests extends TestBase {
 
     @Test
     public void testCalls() throws IOException, InterruptedException {
-        patient.patientHelper().loginWithoutPermissions("1111");
-        carer.carerHelper().login("1234571");
+        patient.patientHelper().loginAs("1111");
+        carer.carerHelper().acceptPermissions();
+        carer.carerHelper().loginAs("1234571");
         carer.carerHelper().makeCall("Andrew Leigh");
 
         Assert.assertTrue(patient.patientHelper().isIncomingCallScreenPresent());
@@ -30,6 +31,5 @@ public class CallsTests extends TestBase {
         assist.tokBox().connectToSession(token);*/
 
     }
-
 
 }

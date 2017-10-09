@@ -39,6 +39,10 @@ public class PatientManager {
         patientWD.quit();
     }
 
+    public void resetApp() {
+        patientWD.resetApp();
+    }
+
     public PatientHelper patientHelper() {
         if (patientHelper == null) {
             patientHelper = new PatientHelper(patientWD);
