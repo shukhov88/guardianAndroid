@@ -5,24 +5,26 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.net.MalformedURLException;
+
 public class LoginTests extends TestBase {
 
     @Test
     public void allowPermissions() {
         carer.login().acceptPermissions();
 
-        Assert.assertTrue(carer.carerHelper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/phoneET")));
+        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/phoneET")));
     }
 
     @Test
     public void notExistingUserLogin() {
         carer.login().acceptPermissions();
-        carer.login().as("6541344684314384");
+        carer.login().as("0536987456");
 
         String expected = "Sorry, your phone is not registered. Please call Guardian Assist";
-        String actual = carer.carerHelper().getText(By.id("com.oxagile.GuardianAssist.PatientDev:id/errorDialogText"));
+        String actual = carer.helper().getText(By.id("com.oxagile.GuardianAssist.PatientDev:id/errorDialogText"));
 
-        Assert.assertTrue(carer.carerHelper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/errorDialogText")));
+        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/errorDialogText")));
         Assert.assertEquals(actual,expected);
     }
 
@@ -32,19 +34,25 @@ public class LoginTests extends TestBase {
         carer.login().as("");
 
         String expected = "Please enter your mobile \nnumber";
-        String actual = carer.carerHelper().getText(By.id("com.oxagile.GuardianAssist.PatientDev:id/errorDialogText"));
+        String actual = carer.helper().getText(By.id("com.oxagile.GuardianAssist.PatientDev:id/errorDialogText"));
 
-        Assert.assertTrue(carer.carerHelper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/errorDialogText")));
+        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/errorDialogText")));
         Assert.assertEquals(actual,expected);
     }
 
     @Test
     public void validPatientLogin() {
+        //patient.login().acceptPermissions();
+        patient.login().as("1111");
 
+        Assert.assertTrue(patient.helper().isElementPresent(By.id("useridInput")));
     }
 
     @Test
     public void validCarerLogin() {
+        //patient.login().acceptPermissions();
+        patient.login().as("1234571");
 
+        Assert.assertTrue(patient.helper().isElementPresent(By.id("useridInput")));
     }
 }

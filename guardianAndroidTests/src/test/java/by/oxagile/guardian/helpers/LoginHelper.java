@@ -1,13 +1,19 @@
 package by.oxagile.guardian.helpers;
 
+import by.oxagile.guardian.managers.CarerManager;
+import by.oxagile.guardian.managers.PatientManager;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
 
 public class LoginHelper extends BaseHelper {
 
-    public LoginHelper(AndroidDriver androidDriver) {
-        super(androidDriver);
+    public LoginHelper(PatientManager patientManager) {
+        super(patientManager);
+    }
+
+    public LoginHelper(CarerManager carerManager) {
+        super(carerManager);
     }
 
     public void acceptPermissions() {

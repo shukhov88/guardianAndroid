@@ -8,6 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -17,43 +18,53 @@ public class CarerManager {
     private CarerHelper carerHelper;
     private LoginHelper loginHelper;
 
-    public void init() throws IOException {
+    public AndroidDriver getCarerDriver() {
+        if (carerWD == null) {
+            File app = new File ("c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk");
 
-        File app = new File ("c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk");
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
+            //SGS7 (work - #101314)
+            capabilities.setCapability("deviceName", "ce12160cbab93cae0c");
+            capabilities.setCapability("platformVersion", "6.0.1");
+            capabilities.setCapability("platformName", "Android");
+            capabilities.setCapability("app", app.getAbsolutePath());
+            capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
+            capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-        //SGS7 (work - #101314)
-        capabilities.setCapability("deviceName", "ce12160cbab93cae0c");
-        capabilities.setCapability("platformVersion", "6.0.1");
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("app", app.getAbsolutePath());
-        capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
-        capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
+            try {
+                carerWD = new AndroidDriver(new URL("http://192.168.33.114:4444/wd/hub"),capabilities);
+                carerWD.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
-        carerWD = new AndroidDriver(new URL("http://192.168.33.114:4444/wd/hub"),capabilities);
-        carerWD.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
+        return carerWD;
     }
 
     public void stop() {
-        carerWD.quit();
+        if (carerWD != null) {
+            carerWD.quit();
+        }
     }
 
     public void resetApp() {
-        carerWD.resetApp();
+        if (carerWD != null) {
+            carerWD.resetApp();
+        }
     }
 
-    public CarerHelper carerHelper() {
+    public CarerHelper helper() {
         if (carerHelper == null) {
-            carerHelper = new CarerHelper(carerWD);
+            carerHelper = new CarerHelper(this);
         }
         return carerHelper;
     }
 
     public LoginHelper login() {
         if (loginHelper == null) {
-            loginHelper = new LoginHelper(carerWD);
+            loginHelper = new LoginHelper(this);
         }
         return loginHelper;
     }

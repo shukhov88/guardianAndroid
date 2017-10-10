@@ -1,17 +1,19 @@
 package by.oxagile.guardian.managers;
 
-import by.oxagile.guardian.helpers.HttpSession;
-import by.oxagile.guardian.helpers.MongoHelper;
-import by.oxagile.guardian.helpers.AssistHelper;
+import by.oxagile.guardian.helpers.*;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 

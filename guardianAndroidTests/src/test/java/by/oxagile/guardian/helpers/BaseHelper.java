@@ -1,6 +1,8 @@
 package by.oxagile.guardian.helpers;
 
 import by.oxagile.guardian.managers.AssistManager;
+import by.oxagile.guardian.managers.CarerManager;
+import by.oxagile.guardian.managers.PatientManager;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
@@ -9,17 +11,25 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 
 public class BaseHelper {
-
+    protected CarerManager carer;
+    protected PatientManager patient;
     protected AndroidDriver androidDriver;
-    protected WebDriver webDriver;
     protected AssistManager assist;
+    protected WebDriver webDriver;
 
-    public BaseHelper(AndroidDriver androidDriver) {
-        this.androidDriver = androidDriver;
+    public BaseHelper(CarerManager carerManager) {
+        this.carer = carerManager;
+        this.androidDriver = carer.getCarerDriver();
+    }
+
+    public BaseHelper(PatientManager patientManager) {
+        this.patient = patientManager;
+        this.androidDriver = patientManager.getPatientDriver();
     }
 
     public BaseHelper(AssistManager assist) {

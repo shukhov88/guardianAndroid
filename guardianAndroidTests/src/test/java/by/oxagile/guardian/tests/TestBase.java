@@ -19,8 +19,6 @@ public class TestBase {
 
     @BeforeSuite
     public void setUp() throws Exception {
-        patient.init();
-        carer.init();
         assist.init();
     }
 

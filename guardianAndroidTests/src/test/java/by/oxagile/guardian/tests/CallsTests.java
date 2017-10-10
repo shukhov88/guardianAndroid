@@ -10,17 +10,17 @@ public class CallsTests extends TestBase {
 
     @Test
     public void testCalls() throws IOException, InterruptedException {
-        patient.patientHelper().loginAs("1111");
-        carer.carerHelper().acceptPermissions();
-        carer.carerHelper().loginAs("1234571");
-        carer.carerHelper().makeCall("Andrew Leigh");
+        patient.helper().loginAs("1111");
+        carer.helper().acceptPermissions();
+        carer.helper().loginAs("1234571");
+        carer.helper().makeCall("Andrew Leigh");
 
-        Assert.assertTrue(patient.patientHelper().isIncomingCallScreenPresent());
+        Assert.assertTrue(patient.helper().isIncomingCallScreenPresent());
 
-        patient.patientHelper().acceptCall();
+        patient.helper().acceptCall();
 
-        carer.carerHelper().inviteToCall("Guardian Assist");
-        carer.carerHelper().stopInvitingToCall();
+        carer.helper().inviteToCall("Guardian Assist");
+        carer.helper().stopInvitingToCall();
 
 
         /*String token = assist.newSession().requestCall(assist.getProperty("1234567.ID"), assist.getProperty("1111.DeviceID"), assist.getProperty("1111.Platform"));
