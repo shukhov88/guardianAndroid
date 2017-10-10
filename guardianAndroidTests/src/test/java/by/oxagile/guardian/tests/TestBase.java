@@ -19,21 +19,21 @@ public class TestBase {
 
     @BeforeSuite
     public void setUp() throws Exception {
-        //patient.init();
+        patient.init();
         carer.init();
         assist.init();
     }
 
     @AfterSuite
     public void tearDown() {
-        //patient.stop();
+        patient.stop();
         carer.stop();
         assist.stop();
     }
 
     @BeforeMethod
     public void resetApp() {
-        //patient.resetApp();
+        patient.resetApp();
         carer.resetApp();
     }
 

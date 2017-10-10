@@ -1,6 +1,8 @@
 package by.oxagile.guardian.managers;
 
+import by.oxagile.guardian.helpers.LoginHelper;
 import by.oxagile.guardian.helpers.PatientHelper;
+import by.oxagile.guardian.tests.LoginTests;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -15,6 +17,7 @@ public class PatientManager {
 
     private AndroidDriver patientWD;
     private PatientHelper patientHelper;
+    private LoginHelper loginHelper;
 
     public void init() throws IOException {
 
@@ -31,7 +34,7 @@ public class PatientManager {
         capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
 
         patientWD = new AndroidDriver(new URL("http://192.168.33.114:4444/wd/hub"),capabilities);
-        patientWD.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
+        patientWD.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
     }
 
@@ -48,5 +51,12 @@ public class PatientManager {
             patientHelper = new PatientHelper(patientWD);
         }
         return patientHelper;
+    }
+
+    public LoginHelper login() {
+        if (loginHelper == null) {
+            loginHelper = new LoginHelper(patientWD);
+        }
+        return loginHelper;
     }
 }

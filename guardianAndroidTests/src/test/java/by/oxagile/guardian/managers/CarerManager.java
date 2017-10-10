@@ -1,6 +1,7 @@
 package by.oxagile.guardian.managers;
 
 import by.oxagile.guardian.helpers.CarerHelper;
+import by.oxagile.guardian.helpers.LoginHelper;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -14,6 +15,7 @@ public class CarerManager {
 
     private AndroidDriver carerWD;
     private CarerHelper carerHelper;
+    private LoginHelper loginHelper;
 
     public void init() throws IOException {
 
@@ -47,5 +49,12 @@ public class CarerManager {
             carerHelper = new CarerHelper(carerWD);
         }
         return carerHelper;
+    }
+
+    public LoginHelper login() {
+        if (loginHelper == null) {
+            loginHelper = new LoginHelper(carerWD);
+        }
+        return loginHelper;
     }
 }
