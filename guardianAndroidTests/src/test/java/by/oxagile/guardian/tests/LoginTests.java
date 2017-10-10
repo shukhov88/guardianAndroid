@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.net.MalformedURLException;
+
 
 public class LoginTests extends TestBase {
 
@@ -42,16 +42,16 @@ public class LoginTests extends TestBase {
 
     @Test
     public void validPatientLogin() {
-        //patient.login().acceptPermissions();
-        patient.login().as("1111");
+        carer.login().acceptPermissions();
+        carer.login().as("1111");
 
         Assert.assertTrue(patient.helper().isElementPresent(By.id("useridInput")));
     }
 
     @Test
     public void validCarerLogin() {
-        //patient.login().acceptPermissions();
-        patient.login().as("1234571");
+        carer.login().acceptPermissions();
+        carer.login().as("1234571");
 
         Assert.assertTrue(patient.helper().isElementPresent(By.id("useridInput")));
     }
