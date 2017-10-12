@@ -1,5 +1,6 @@
 package by.oxagile.guardian.managers;
 
+import by.oxagile.guardian.helpers.CalsHelper;
 import by.oxagile.guardian.helpers.CarerHelper;
 import by.oxagile.guardian.helpers.LoginHelper;
 import io.appium.java_client.android.AndroidDriver;
@@ -17,6 +18,7 @@ public class CarerManager {
     private AndroidDriver carerWD;
     private CarerHelper carerHelper;
     private LoginHelper loginHelper;
+    private CalsHelper calsHelper;
 
     public AndroidDriver getCarerDriver() {
         if (carerWD == null) {
@@ -67,5 +69,12 @@ public class CarerManager {
             loginHelper = new LoginHelper(this);
         }
         return loginHelper;
+    }
+
+    public CalsHelper calls() {
+        if (calsHelper == null) {
+            calsHelper = new CalsHelper(this);
+        }
+        return calsHelper;
     }
 }

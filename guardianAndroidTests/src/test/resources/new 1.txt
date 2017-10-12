@@ -5,9 +5,7 @@ appium --nodeconfig c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\t
 appium --nodeconfig c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\test\resources\SGS7.json -p 4730
 
 
+--use-fake-ui-for-media-stream  -  avoids the need to grant camera/microphone permissions.
 
-
-appium --nodeconfig c:\Users\shukhovvg\AssistTEST\src\test\resources\SGS4.json -p 4725 --default-capabilities "{\"udid\": \"4d00e7d3b654a039\"}"
-
-appium --nodeconfig c:\Users\shukhovvg\AssistTEST\src\test\resources\SGS7.json -p 4730 --default-capabilities "{\"udid\": \"ce12160cbab93cae0c\"}"
+--use-fake-device-for-media-stream  -  feeds a test pattern to getUserMedia() instead of live camera input.
 

@@ -9,14 +9,14 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends TestBase {
 
-    @Test
+    @Test (enabled = true)
     public void allowPermissions() {
         carer.login().acceptPermissions();
 
         Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/phoneET")));
     }
 
-    @Test
+    @Test (enabled = true)
     public void notExistingUserLogin() {
         carer.login().acceptPermissions();
         carer.login().as("0536987456");
@@ -28,7 +28,7 @@ public class LoginTests extends TestBase {
         Assert.assertEquals(actual,expected);
     }
 
-    @Test
+    @Test (enabled = true)
     public void emptyLogin() {
         carer.login().acceptPermissions();
         carer.login().as("");
@@ -40,7 +40,7 @@ public class LoginTests extends TestBase {
         Assert.assertEquals(actual,expected);
     }
 
-    @Test
+    @Test (enabled = true)
     public void validPatientLogin() {
         carer.login().acceptPermissions();
         carer.login().as("1111");
@@ -48,7 +48,7 @@ public class LoginTests extends TestBase {
         Assert.assertTrue(patient.helper().isElementPresent(By.id("useridInput")));
     }
 
-    @Test
+    @Test (enabled = true)
     public void validCarerLogin() {
         carer.login().acceptPermissions();
         carer.login().as("1234571");

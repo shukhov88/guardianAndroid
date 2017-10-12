@@ -1,5 +1,6 @@
 package by.oxagile.guardian.managers;
 
+import by.oxagile.guardian.helpers.CalsHelper;
 import by.oxagile.guardian.helpers.LoginHelper;
 import by.oxagile.guardian.helpers.PatientHelper;
 import by.oxagile.guardian.tests.LoginTests;
@@ -19,6 +20,7 @@ public class PatientManager {
     private AndroidDriver patientWD;
     private PatientHelper patientHelper;
     private LoginHelper loginHelper;
+    private CalsHelper calsHelper;
 
     public AndroidDriver getPatientDriver() {
         if (patientWD == null) {
@@ -69,5 +71,12 @@ public class PatientManager {
             loginHelper = new LoginHelper(this);
         }
         return loginHelper;
+    }
+
+    public CalsHelper calls() {
+        if (calsHelper == null) {
+            calsHelper = new CalsHelper(this);
+        }
+        return calsHelper;
     }
 }

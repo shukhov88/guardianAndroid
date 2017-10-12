@@ -4,6 +4,7 @@ import by.oxagile.guardian.helpers.*;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
@@ -14,6 +15,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -41,7 +44,7 @@ public class AssistManager {
         }
     }
 
-    public HttpSession newSession() {
+    public HttpSession newHttpSession() {
         return new HttpSession(this);
     }
 
@@ -50,12 +53,17 @@ public class AssistManager {
     }
 
     public WebDriver getDriver() {
+        List<String> args = new ArrayList<>();
+        args.add("--use-fake-ui-for-media-stream");
+        args.add("--use-fake-device-for-media-stream");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(args);
 
         if (wd == null) {
             if (browser.equals(BrowserType.FIREFOX)) {
                 wd = new FirefoxDriver();
             } else if (browser.equals(BrowserType.CHROME)) {
-                wd = new ChromeDriver();
+                wd = new ChromeDriver(options);
             } else if (browser.equals(BrowserType.IE)) {
                 wd = new InternetExplorerDriver();
             }
