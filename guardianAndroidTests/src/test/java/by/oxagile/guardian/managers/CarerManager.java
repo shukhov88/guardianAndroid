@@ -1,6 +1,6 @@
 package by.oxagile.guardian.managers;
 
-import by.oxagile.guardian.helpers.CalsHelper;
+import by.oxagile.guardian.helpers.CallsHelper;
 import by.oxagile.guardian.helpers.CarerHelper;
 import by.oxagile.guardian.helpers.LoginHelper;
 import io.appium.java_client.android.AndroidDriver;
@@ -8,8 +8,6 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -18,7 +16,7 @@ public class CarerManager {
     private AndroidDriver carerWD;
     private CarerHelper carerHelper;
     private LoginHelper loginHelper;
-    private CalsHelper calsHelper;
+    private CallsHelper callsHelper;
 
     public AndroidDriver getCarerDriver() {
         if (carerWD == null) {
@@ -71,10 +69,10 @@ public class CarerManager {
         return loginHelper;
     }
 
-    public CalsHelper calls() {
-        if (calsHelper == null) {
-            calsHelper = new CalsHelper(this);
+    public CallsHelper calls() {
+        if (callsHelper == null) {
+            callsHelper = new CallsHelper(this);
         }
-        return calsHelper;
+        return callsHelper;
     }
 }

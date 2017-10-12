@@ -10,13 +10,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class CalsHelper extends BaseHelper {
+public class CallsHelper extends BaseHelper {
 
-    public CalsHelper(CarerManager carerManager) {
+    public CallsHelper(CarerManager carerManager) {
         super(carerManager);
     }
 
-    public CalsHelper(PatientManager patientManager) {
+    public CallsHelper(PatientManager patientManager) {
         super(patientManager);
     }
 

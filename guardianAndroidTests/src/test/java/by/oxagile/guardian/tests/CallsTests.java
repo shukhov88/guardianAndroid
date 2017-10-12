@@ -10,7 +10,7 @@ public class CallsTests extends TestBase {
 
     @Test
     public void testCalls() throws IOException, InterruptedException {
-        /*patient.login().as("1111");
+        patient.login().as("1111");
         patient.login().skipUberSignin();
         carer.login().acceptPermissions();
         carer.login().as("1234571");
@@ -22,7 +22,7 @@ public class CallsTests extends TestBase {
 
         patient.calls().accept();
 
-        carer.calls().inviteThirdParty("Guardian Assist");*/
+        carer.calls().inviteThirdParty("Guardian Assist");
 
         //carer.calls().stopInviting();
 
