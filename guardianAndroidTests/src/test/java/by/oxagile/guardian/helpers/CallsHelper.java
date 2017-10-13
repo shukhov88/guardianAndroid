@@ -4,13 +4,14 @@ package by.oxagile.guardian.helpers;
 import by.oxagile.guardian.managers.CarerManager;
 import by.oxagile.guardian.managers.PatientManager;
 import io.appium.java_client.MobileElement;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
 public class CallsHelper extends BaseHelper {
+
+    private static final CallsHelperLocators LOCATORS = new CallsHelperLocators();
 
     public CallsHelper(CarerManager carerManager) {
         super(carerManager);
@@ -21,62 +22,57 @@ public class CallsHelper extends BaseHelper {
     }
 
     public void dialTo(String contact) {
-        List<MobileElement> contactsList = androidDriver.findElements(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name"));
+        List<MobileElement> contactsList = androidDriver.findElements(LOCATORS.contactCell);
         for (int i = 0; i < contactsList.size(); i++) {
             if (contactsList.get(i).getText().equals(contact)) {
                 contactsList.get(i).click();
             }
         }
-        androidDriver.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")).click();
+        androidDriver.findElement(LOCATORS.startCallButton).click();
     }
 
     public boolean isIncomingCallScreenPresent() {
         WebDriverWait wait = new WebDriverWait(androidDriver, 15);
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget" +
-                ".LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget" +
-                ".FrameLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.ImageView")));
-        return androidDriver.findElements(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget" +
-                ".LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget" +
-                ".FrameLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.ImageView")).size() == 1;
+        wait.until(ExpectedConditions.presenceOfElementLocated(LOCATORS.incomingCallScreen));
+        return androidDriver.findElements(LOCATORS.incomingCallScreen).size() == 1;
     }
 
     public void accept() {
         WebDriverWait wait = new WebDriverWait(androidDriver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("com.oxagile.GuardianAssist.PatientDev:id/ra_driver_status")));
-        androidDriver.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/ra_driver_status")).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(LOCATORS.acceptCallButton));
+        androidDriver.findElement(LOCATORS.acceptCallButton).click();
     }
 
     public void decline() {
-        androidDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget" +
-                ".LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget" +
-                ".FrameLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.ImageView")).click();
+        androidDriver.findElement(LOCATORS.declineCallButton).click();
     }
 
     public void leave() {
-        androidDriver.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_end_btn")).click();
+        androidDriver.findElement(LOCATORS.ebdCallButton).click();
         androidDriver.resetApp();
     }
 
-    public String getIncomingCallName() {
-        return androidDriver.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_name")).getText();
+    public String getCallerName() {
+        return androidDriver.findElement(LOCATORS.callerName).getText();
     }
 
     public String getOnCallName() {
-        return androidDriver.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_name")).getText();
+        return androidDriver.findElement(LOCATORS.onCallName).getText();
     }
 
     public void inviteThirdParty(String contact) {
-        androidDriver.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_invite_btn")).click();
-        List<MobileElement> contactsList = androidDriver.findElements(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name"));
+
+        androidDriver.findElement(LOCATORS.inviteThirdPartyButton).click();
+        List<MobileElement> contactsList = androidDriver.findElements(LOCATORS.contactCell);
         for (int i = 0; i < contactsList.size(); i++) {
             if (contactsList.get(i).getText().equals(contact)) {
                 contactsList.get(i).click();
             }
         }
-        androidDriver.findElement(By.id("com.oxagile.GuardianAssist.PatientDev:id/add_to_call_btn")).click();
+        androidDriver.findElement(LOCATORS.inviteToCallButton).click();
     }
 
     public void stopInviting() {
-        androidDriver.findElement(By.xpath("//android.widget.LinearLayout[@resource-id='com.oxagile.GuardianAssist.PatientDev:id/on_call_kick_btn']/android.widget.ImageView")).click();
+        androidDriver.findElement(LOCATORS.stopInviting).click();
     }
 }
