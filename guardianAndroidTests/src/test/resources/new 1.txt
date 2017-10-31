@@ -4,6 +4,8 @@ appium --nodeconfig c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\t
 
 appium --nodeconfig c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\test\resources\SGS7.json -p 4730
 
+appium --nodeconfig c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\test\resources\SGS7_And7.json -p 4735
+
 
 --use-fake-ui-for-media-stream  -  avoids the need to grant camera/microphone permissions.
 

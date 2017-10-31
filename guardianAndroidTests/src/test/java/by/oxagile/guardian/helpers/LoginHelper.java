@@ -2,6 +2,7 @@ package by.oxagile.guardian.helpers;
 
 import by.oxagile.guardian.managers.CarerManager;
 import by.oxagile.guardian.managers.PatientManager;
+import by.oxagile.guardian.managers.Wait;
 import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
@@ -34,9 +35,16 @@ public class LoginHelper extends BaseHelper {
     }
 
     public void skipUberSignin() {
-        WebDriverWait wait = new WebDriverWait(androidDriver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(LOCATORS.uberLoginField));
+        waitForElementPresence(LOCATORS.uberLoginField, Wait.FOR_UBER_PAGE.getValue());
         androidDriver.pressKeyCode(AndroidKeyCode.BACK);
+    }
+
+    public void toAppAs(boolean permissions, String mobile) {
+        if (permissions) {
+            acceptPermissions();
+        }
+        as(mobile);
+        skipUberSignin();
     }
 
     //Not ready to use due to SMS code validation added by Uber. Need to implement code extract from SMS:

@@ -4,6 +4,7 @@ import by.oxagile.guardian.helpers.*;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -53,17 +54,18 @@ public class AssistManager {
     }
 
     public WebDriver getDriver() {
-        List<String> args = new ArrayList<>();
-        args.add("--use-fake-ui-for-media-stream");
-        args.add("--use-fake-device-for-media-stream");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments(args);
 
         if (wd == null) {
             if (browser.equals(BrowserType.FIREFOX)) {
                 wd = new FirefoxDriver();
             } else if (browser.equals(BrowserType.CHROME)) {
-                wd = new ChromeDriver(options);
+                /*String path = "c:\\Users\\shukhovvg\\AppData\\Local\\Google\\Chrome\\User Data";
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("user-data-dir=" + path);
+                options.addArguments("--start-maximized");*/
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--use-fake-device-for-media-stream");
+                wd = new ChromeDriver();
             } else if (browser.equals(BrowserType.IE)) {
                 wd = new InternetExplorerDriver();
             }

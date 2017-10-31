@@ -22,11 +22,21 @@ public class PatientManager {
         if (patientWD == null) {
             File app = new File ("c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk");
 
-            DesiredCapabilities capabilities = new DesiredCapabilities();
+            /*DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
             //SGS4 (my personal)
             capabilities.setCapability("deviceName", "4d00e7d3b654a039");
             capabilities.setCapability("platformVersion", "5.0.1");
+            capabilities.setCapability("platformName", "Android");
+            capabilities.setCapability("app", app.getAbsolutePath());
+            capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
+            capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");*/
+
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
+            //SGS4 (my personal)
+            capabilities.setCapability("deviceName", "ad0c1603a9064c6b0b");
+            capabilities.setCapability("platformVersion", "7.0");
             capabilities.setCapability("platformName", "Android");
             capabilities.setCapability("app", app.getAbsolutePath());
             capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");

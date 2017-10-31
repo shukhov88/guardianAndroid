@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
-
+import java.util.concurrent.TimeUnit;
 
 
 public class BaseHelper {
@@ -71,8 +71,6 @@ public class BaseHelper {
     }*/
 
     public boolean isElementPresent(By locator) {
-        WebDriverWait wait = new WebDriverWait(androidDriver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         return androidDriver.findElements(locator).size() == 1;
     }
 
@@ -80,4 +78,12 @@ public class BaseHelper {
         return androidDriver.findElement(locator).getText();
     }
 
+    public void waitForElementPresence(By locator, int seconds) {
+        WebDriverWait wait = new WebDriverWait(androidDriver, seconds);
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
+    public void setImplicitlyWait(int seconds) {
+        androidDriver.manage().timeouts().implicitlyWait(seconds, TimeUnit.MILLISECONDS);
+    }
 }

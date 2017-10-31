@@ -2,10 +2,8 @@ package by.oxagile.guardian.helpers;
 
 
 import by.oxagile.guardian.managers.AssistManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
-
+import java.awt.*;
+import java.awt.event.KeyEvent;
 
 
 public class AssistHelper extends BaseHelper {
@@ -30,14 +28,25 @@ public class AssistHelper extends BaseHelper {
         click(LOCATORS.connectSession);
         click(LOCATORS.publishStream);
         click(LOCATORS.submitStreamPublish);
-        //Actions actions = new Actions(webDriver);
-        //actions.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
-        //actions.sendKeys("\u2B7E").sendKeys("\u23CE").perform();
+    }
 
+    public void allowPermission() {
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_TAB);
+            robot.keyRelease(KeyEvent.VK_TAB);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
     }
 
     public void joinCall(String token) {
+
         playgroundLogin();
         playgroundConnect(token);
+        allowPermission();
     }
 }
