@@ -103,7 +103,7 @@ public class CallsHelper extends BaseHelper {
     }
 
     public void stopDialing() {
-        androidDriver.findElement(LOCATORS.endCallButton).click();
+        androidDriver.findElement(LOCATORS.stopDialingButton).click();
     }
 
     public void timeOut() {

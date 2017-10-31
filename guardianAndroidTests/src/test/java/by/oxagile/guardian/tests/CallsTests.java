@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class CallsTests extends TestBase {
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void recieverAcceptsCall() {
         patient.login().toAppAs(false, "1111");
         carer.login().toAppAs(true,"1234571");
@@ -51,7 +51,7 @@ public class CallsTests extends TestBase {
     @Test (enabled = false)
     public void carerAssistVideoStreamsLocation() throws IOException {
         carer.login().toAppAs(true,"1234571");
-        carer.calls().dialTo("ASSIST");
+        carer.calls().dialTo("Guardian Assist");
         String callID = assist.mongoDB().getLastCallID();
         String token = assist.newHttpSession().joinCall(callID);
         assist.tokBox().joinCall(token);
@@ -60,14 +60,20 @@ public class CallsTests extends TestBase {
         Assert.assertTrue(carer.calls().getTopLeftVideoStreamID().isEmpty());
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void initiatorDeclinesCall() {
         carer.login().toAppAs(true,"1234571");
+        patient.login().toAppAs(false, "1111");
         carer.calls().dialTo("Andrew Leigh");
+        assist.mongoDB().getLastCallID();
+
+        Assert.assertTrue(patient.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn")));
+
         carer.calls().stopDialing();
 
-        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name")));
-        Assert.assertTrue(assist.mongoDB().getLastCallStatus().equals("ORIGINATOR_RESET"));
+        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")));
+        Assert.assertTrue(patient.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")));
+        Assert.assertEquals(assist.mongoDB().getLastCallStatus(), "ORIGINATOR_RESET");
     }
 
     @Test (enabled = false)

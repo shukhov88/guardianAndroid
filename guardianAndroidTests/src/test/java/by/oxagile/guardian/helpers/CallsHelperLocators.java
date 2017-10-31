@@ -10,6 +10,7 @@ public class CallsHelperLocators {
     By acceptCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn");
     By declineCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_end_btn");
     By endCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_end_btn");
+    By stopDialingButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/dialling_end_btn");
     By callerName = By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_name");
     By onCallName = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_name");
     By inviteThirdPartyButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_invite_btn");
