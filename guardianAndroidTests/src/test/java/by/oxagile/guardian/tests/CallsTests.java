@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class CallsTests extends TestBase {
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void recieverAcceptsCall() {
         patient.login().toAppAs(false, "1111");
         carer.login().toAppAs(true,"1234571");

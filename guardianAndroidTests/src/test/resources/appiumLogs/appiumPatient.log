@@ -1,0 +1,1015 @@
+2017-10-31 20:08:06:634 - info: [Appium] Welcome to Appium v1.7.0
+2017-10-31 20:08:06:634 - info: [Appium] Non-default server args:
+2017-10-31 20:08:06:634 - info: [Appium]   port: 32007
+2017-10-31 20:08:06:634 - info: [Appium]   log: C:\Users\shukhovvg\guardianAssist\guardianAndroidTests\.\src\test\resources\appiumLogs\appiumPatient.log
+2017-10-31 20:08:06:634 - info: [Appium]   loglevel: error:debug
+2017-10-31 20:08:06:634 - info: [Appium]   logTimestamp: true
+2017-10-31 20:08:06:634 - info: [Appium]   localTimezone: true
+2017-10-31 20:08:06:686 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:32007
+2017-10-31 20:08:07:496 - info: [HTTP] --> GET /wd/hub/status {}
+2017-10-31 20:08:07:496 - debug: [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-10-31 20:08:07:535 - debug: [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.7.0","revision":null}}
+2017-10-31 20:08:07:550 - info: [HTTP] <-- GET /wd/hub/status 200 44 ms - 83 
+2017-10-31 20:08:07:735 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"requiredCapabilities":{},"capabilities":{"desiredCapabilities":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"requiredCapabilities":{},"alwaysMatch":{"browserName":"","platformName":"Android"},"firstMatch":[]}}
+2017-10-31 20:08:07:735 - debug: [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},{},{"desiredCapabilities":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"requiredCapabilities":{},"alwaysMatch":{"browserName":"","platformName":"Android"},"firstMatch":[]}]
+2017-10-31 20:08:07:735 - debug: [BaseDriver] Event 'newSessionRequested' logged at 1509469687735 (20:08:07 GMT+0300 (Belarus Standard Time))
+2017-10-31 20:08:07:751 - info: [Appium] Creating new AndroidDriver (v1.26.5) session
+2017-10-31 20:08:07:751 - info: [Appium] Capabilities:
+2017-10-31 20:08:07:751 - info: [Appium]   app: 'c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk'
+2017-10-31 20:08:07:751 - info: [Appium]   appPackage: 'com.oxagile.GuardianAssist.PatientDev'
+2017-10-31 20:08:07:751 - info: [Appium]   appActivity: 'com.guardianassist.patient.login.LoginActivity'
+2017-10-31 20:08:07:751 - info: [Appium]   platformVersion: '5.0.1'
+2017-10-31 20:08:07:751 - info: [Appium]   browserName: ''
+2017-10-31 20:08:07:751 - info: [Appium]   platformName: 'Android'
+2017-10-31 20:08:07:751 - info: [Appium]   deviceName: '4d00e7d3b654a039'
+2017-10-31 20:08:07:766 - info: [BaseDriver] Session created with session id: f044adb6-462d-489b-8e37-3aeb70be8dde
+2017-10-31 20:08:07:766 - debug: [AndroidDriver] Getting Java version
+2017-10-31 20:08:07:851 - info: [AndroidDriver] Java version is: 1.8.0_141
+2017-10-31 20:08:07:851 - info: [ADB] Checking whether adb is present
+2017-10-31 20:08:07:867 - info: [ADB] Using adb.exe from c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe
+2017-10-31 20:08:07:867 - info: [AndroidDriver] Retrieving device list
+2017-10-31 20:08:07:867 - debug: [ADB] Trying to find a connected android device
+2017-10-31 20:08:07:867 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:07:898 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:07:898 - info: [AndroidDriver] Looking for a device with Android '5.0.1'
+2017-10-31 20:08:07:898 - debug: [ADB] Setting device id to 4d00e7d3b654a039
+2017-10-31 20:08:07:898 - info: [ADB] Getting device platform version
+2017-10-31 20:08:07:914 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:07:951 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:07:951 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","getprop","ro.build.version.release"]
+2017-10-31 20:08:08:051 - debug: [ADB] Current device property 'ro.build.version.release': 5.0.1
+2017-10-31 20:08:08:051 - info: [AndroidDriver] Using device: 4d00e7d3b654a039
+2017-10-31 20:08:08:051 - info: [ADB] Checking whether adb is present
+2017-10-31 20:08:08:051 - info: [ADB] Using adb.exe from c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe
+2017-10-31 20:08:08:051 - debug: [ADB] Setting device id to 4d00e7d3b654a039
+2017-10-31 20:08:08:051 - info: [BaseDriver] Using local app 'c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\test\resources\guardianPatient-android.apk'
+2017-10-31 20:08:08:051 - debug: [AndroidDriver] Checking whether app is actually present
+2017-10-31 20:08:08:051 - info: [AndroidDriver] Starting Android session
+2017-10-31 20:08:08:051 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","wait-for-device"]
+2017-10-31 20:08:08:098 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:08:136 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:08:136 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","echo","ping"]
+2017-10-31 20:08:08:214 - debug: [Logcat] Starting logcat capture
+2017-10-31 20:08:08:283 - debug: [AndroidDriver] Pushing settings apk to device...
+2017-10-31 20:08:08:283 - debug: [ADB] Getting install status for io.appium.settings
+2017-10-31 20:08:08:283 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:08:334 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:08:335 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","pm","list","packages","io.appium.settings"]
+2017-10-31 20:08:09:053 - debug: [ADB] App is installed
+2017-10-31 20:08:09:053 - debug: [ADB] Getting package info for io.appium.settings
+2017-10-31 20:08:09:053 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:09:100 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:09:100 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","dumpsys","package","io.appium.settings"]
+2017-10-31 20:08:09:200 - info: [ADB] Checking whether aapt is present
+2017-10-31 20:08:09:200 - info: [ADB] Using aapt.exe from c:\Users\shukhovvg\AppData\Local\Android\sdk\build-tools\22.0.1\aapt.exe
+2017-10-31 20:08:09:235 - debug: [ADB] The installed "io.appium.settings" package does not require upgrade (4 >= 4)
+2017-10-31 20:08:09:237 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:09:269 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:09:269 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","getprop","ro.build.version.sdk"]
+2017-10-31 20:08:09:337 - debug: [ADB] Current device property 'ro.build.version.sdk': 21
+2017-10-31 20:08:09:337 - debug: [ADB] Device API level: 21
+2017-10-31 20:08:09:337 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:09:384 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:09:384 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","dumpsys","package","io.appium.settings"]
+2017-10-31 20:08:09:492 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:09:535 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:09:535 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","ps"]
+2017-10-31 20:08:09:685 - debug: [ADB] Device API level: 21
+2017-10-31 20:08:09:685 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:09:731 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:09:732 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","settings","put","secure","mock_location","1"]
+2017-10-31 20:08:10:386 - debug: [AndroidDriver] Pushing unlock helper app to device...
+2017-10-31 20:08:10:386 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","install","C:\\Users\\shukhovvg\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk"]
+2017-10-31 20:08:21:762 - info: [ADB] Getting device platform version
+2017-10-31 20:08:21:762 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:21:793 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:21:793 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","getprop","ro.build.version.release"]
+2017-10-31 20:08:21:878 - debug: [ADB] Current device property 'ro.build.version.release': 5.0.1
+2017-10-31 20:08:21:878 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:21:924 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:21:924 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","wm","size"]
+2017-10-31 20:08:22:788 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:22:812 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:22:812 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","getprop","ro.product.model"]
+2017-10-31 20:08:22:911 - debug: [ADB] Current device property 'ro.product.model': GT-I9500
+2017-10-31 20:08:22:911 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:22:942 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:22:942 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","getprop","ro.product.manufacturer"]
+2017-10-31 20:08:23:027 - debug: [ADB] Current device property 'ro.product.manufacturer': samsung
+2017-10-31 20:08:23:096 - info: [AndroidDriver] Remote apk path is /data/local/tmp/d4ba088ec4746638cef49df686eea4c6.apk
+2017-10-31 20:08:23:096 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:23:143 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:23:143 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","ls","/data/local/tmp/d4ba088ec4746638cef49df686eea4c6.apk"]
+2017-10-31 20:08:23:227 - debug: [AndroidDriver] Checking if app is installed
+2017-10-31 20:08:23:227 - debug: [ADB] Getting install status for com.oxagile.GuardianAssist.PatientDev
+2017-10-31 20:08:23:227 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:23:265 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:23:265 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","pm","list","packages","com.oxagile.GuardianAssist.PatientDev"]
+2017-10-31 20:08:24:167 - debug: [ADB] App is installed
+2017-10-31 20:08:24:167 - info: [AndroidDriver] Apk is already on remote and installed, resetting
+2017-10-31 20:08:24:167 - debug: [AndroidDriver] Running fast reset (stop and clear)
+2017-10-31 20:08:24:167 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:24:214 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:24:214 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","am","force-stop","com.oxagile.GuardianAssist.PatientDev"]
+2017-10-31 20:08:25:016 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:25:048 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:25:048 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","pm","clear","com.oxagile.GuardianAssist.PatientDev"]
+2017-10-31 20:08:25:918 - debug: [AndroidDriver] Extracting strings from apk c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\test\resources\guardianPatient-android.apk null C:\Users\SHUKHO~1\AppData\Local\Temp\com.oxagile.GuardianAssist.PatientDev
+2017-10-31 20:08:25:918 - debug: [ADB] Extracting strings for language: default
+2017-10-31 20:08:25:918 - debug: [ADB] Device API level: 21
+2017-10-31 20:08:25:918 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:25:972 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:25:972 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","getprop","persist.sys.language"]
+2017-10-31 20:08:26:050 - debug: [ADB] Current device property 'persist.sys.language': en
+2017-10-31 20:08:26:751 - debug: [ADB] No strings.xml for language 'en', getting default strings.xml
+2017-10-31 20:08:27:490 - debug: [ADB] Reading strings from converted strings.json
+2017-10-31 20:08:27:490 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","push","C:\\Users\\SHUKHO~1\\AppData\\Local\\Temp\\com.oxagile.GuardianAssist.PatientDev\\strings.json","/data/local/tmp"]
+2017-10-31 20:08:27:553 - debug: [AndroidBootstrap] Watching for bootstrap disconnect
+2017-10-31 20:08:27:553 - debug: [ADB] Forwarding system: 4724 to device: 4724
+2017-10-31 20:08:27:553 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","forward","tcp:4724","tcp:4724"]
+2017-10-31 20:08:27:574 - debug: [UiAutomator] Starting UiAutomator
+2017-10-31 20:08:27:574 - debug: [UiAutomator] Moving to state 'starting'
+2017-10-31 20:08:27:574 - debug: [UiAutomator] Parsing uiautomator jar
+2017-10-31 20:08:27:574 - debug: [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2017-10-31 20:08:27:574 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","push","C:\\Users\\shukhovvg\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-android-bootstrap\\bootstrap\\bin\\AppiumBootstrap.jar","/data/local/tmp/"]
+2017-10-31 20:08:27:637 - debug: [ADB] Attempting to kill all uiautomator processes
+2017-10-31 20:08:27:637 - debug: [ADB] Getting all processes with uiautomator
+2017-10-31 20:08:27:637 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:27:675 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:27:675 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","ps"]
+2017-10-31 20:08:27:906 - info: [ADB] No uiautomator process found to kill, continuing...
+2017-10-31 20:08:27:906 - debug: [UiAutomator] Starting UIAutomator
+2017-10-31 20:08:27:906 - debug: [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.oxagile.GuardianAssist.PatientDev","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2017-10-31 20:08:28:824 - debug: [UiAutomator] Moving to state 'online'
+2017-10-31 20:08:28:824 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2017-10-31 20:08:28:824 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:28:840 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
+2017-10-31 20:08:28:840 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2017-10-31 20:08:28:840 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2017-10-31 20:08:28:873 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:28:874 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","dumpsys","window"]
+2017-10-31 20:08:29:009 - info: [AndroidDriver] Screen already unlocked, doing nothing
+2017-10-31 20:08:29:009 - debug: [ADB] Device API level: 21
+2017-10-31 20:08:29:009 - debug: [ADB] Getting connected devices...
+2017-10-31 20:08:29:056 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:08:29:056 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","am","start","-W","-n","com.oxagile.GuardianAssist.PatientDev/com.guardianassist.patient.login.LoginActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2017-10-31 20:08:30:882 - info: [Appium] New AndroidDriver session created successfully, session f044adb6-462d-489b-8e37-3aeb70be8dde added to master session list
+2017-10-31 20:08:30:882 - debug: [BaseDriver] Event 'newSessionStarted' logged at 1509469710882 (20:08:30 GMT+0300 (Belarus Standard Time))
+2017-10-31 20:08:30:882 - debug: [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:30:882 - info: [HTTP] <-- POST /wd/hub/session 200 23137 ms - 1066 
+2017-10-31 20:08:30:944 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/timeouts {"type":"implicit","ms":5000}
+2017-10-31 20:08:30:944 - debug: [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",5000,"f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:30:944 - debug: [BaseDriver] Set implicit wait to 5000ms
+2017-10-31 20:08:30:944 - debug: [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-10-31 20:08:30:944 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/timeouts 200 4 ms - 76 
+2017-10-31 20:08:30:960 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/phoneET"}
+2017-10-31 20:08:30:960 - debug: [MJSONWP] Calling AppiumDriver.findElement() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/phoneET","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:30:960 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:08:30:960 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:08:30:960 - debug: [BaseDriver] Waiting up to 5000 ms for condition
+2017-10-31 20:08:30:960 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/phoneET","context":"","multiple":false}}
+2017-10-31 20:08:30:960 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/phoneET","context":"","multiple":false}}
+2017-10-31 20:08:30:960 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:08:30:960 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:08:30:960 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/phoneET' using 'ID' with the contextId: '' multiple: false
+2017-10-31 20:08:30:960 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/phoneET]
+2017-10-31 20:08:31:900 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
+2017-10-31 20:08:31:900 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:08:31:900 - debug: [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"1"}
+2017-10-31 20:08:31:900 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element 200 953 ms - 87 
+2017-10-31 20:08:31:931 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:31:931 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:31:931 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:31:931 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 2 ms - 1066 
+2017-10-31 20:08:31:947 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:31:947 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:31:947 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:31:947 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 2 ms - 1066 
+2017-10-31 20:08:31:962 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:31:962 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:31:962 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:31:962 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 2 ms - 1066 
+2017-10-31 20:08:31:980 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:31:980 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:31:981 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:31:982 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 2 ms - 1066 
+2017-10-31 20:08:32:001 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element/1/value {"id":"1","value":["1111"]}
+2017-10-31 20:08:32:001 - debug: [MJSONWP] Calling AppiumDriver.setValue() with args: [["1111"],"1","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:32:001 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:setText","params":{"elementId":"1","text":"1111","replace":false}}
+2017-10-31 20:08:32:001 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"1","text":"1111","replace":false}}
+2017-10-31 20:08:32:001 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:08:32:001 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: setText
+2017-10-31 20:08:32:001 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using element passed in: 1
+2017-10-31 20:08:32:032 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Attempting to clear using UiObject.clearText().
+2017-10-31 20:08:34:449 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Sending plain text to element: 1111
+2017-10-31 20:08:37:006 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2017-10-31 20:08:37:006 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:08:37:006 - debug: [MJSONWP] Responding to client with driver.setValue() result: true
+2017-10-31 20:08:37:006 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element/1/value 200 5014 ms - 76 
+2017-10-31 20:08:37:037 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/email_sign_in_button"}
+2017-10-31 20:08:37:037 - debug: [MJSONWP] Calling AppiumDriver.findElement() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/email_sign_in_button","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:37:037 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:08:37:037 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:08:37:037 - debug: [BaseDriver] Waiting up to 5000 ms for condition
+2017-10-31 20:08:37:037 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/email_sign_in_button","context":"","multiple":false}}
+2017-10-31 20:08:37:037 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/email_sign_in_button","context":"","multiple":false}}
+2017-10-31 20:08:37:037 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:08:37:037 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:08:37:037 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/email_sign_in_button' using 'ID' with the contextId: '' multiple: false
+2017-10-31 20:08:37:037 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/email_sign_in_button]
+2017-10-31 20:08:37:523 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"2"}}
+2017-10-31 20:08:37:539 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:08:37:539 - debug: [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"2"}
+2017-10-31 20:08:37:539 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element 200 501 ms - 87 
+2017-10-31 20:08:37:554 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:37:554 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:37:554 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:37:554 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 10 ms - 1066 
+2017-10-31 20:08:37:586 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:37:587 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:37:588 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:37:589 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 2 ms - 1066 
+2017-10-31 20:08:37:608 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:37:608 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:37:608 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:37:608 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 2 ms - 1066 
+2017-10-31 20:08:37:623 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:37:623 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:37:623 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:37:623 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 2 ms - 1066 
+2017-10-31 20:08:37:639 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element/2/click {"id":"2"}
+2017-10-31 20:08:37:639 - debug: [MJSONWP] Calling AppiumDriver.click() with args: ["2","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:37:639 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
+2017-10-31 20:08:37:639 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
+2017-10-31 20:08:37:639 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:08:37:639 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2017-10-31 20:08:37:908 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2017-10-31 20:08:37:908 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:08:37:908 - debug: [MJSONWP] Responding to client with driver.click() result: true
+2017-10-31 20:08:37:908 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element/2/click 200 276 ms - 76 
+2017-10-31 20:08:37:939 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"useridInput"}
+2017-10-31 20:08:37:939 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","useridInput","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:37:939 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:08:37:939 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:08:37:939 - debug: [BaseDriver] Waiting up to 5000 ms for condition
+2017-10-31 20:08:37:939 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"useridInput","context":"","multiple":true}}
+2017-10-31 20:08:37:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"useridInput","context":"","multiple":true}}
+2017-10-31 20:08:37:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:08:37:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:08:37:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'useridInput' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:08:37:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:37:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:37:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:37:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:38:826 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:38:826 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:38:826 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:38:826 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:39:296 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:39:296 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:39:296 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:39:296 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=useridInput]
+2017-10-31 20:08:39:311 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:39:311 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:39:311 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:39:311 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[DESCRIPTION=useridInput, INSTANCE=0]
+2017-10-31 20:08:39:813 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:08:39:813 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'useridInput' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:08:39:813 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:39:813 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:39:813 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:39:813 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:39:844 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:39:844 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:39:844 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:39:844 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:39:875 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:39:875 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:39:875 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:39:875 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=useridInput]
+2017-10-31 20:08:40:029 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:40:029 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:40:029 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:40:029 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[DESCRIPTION=useridInput, INSTANCE=0]
+2017-10-31 20:08:40:029 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:08:40:029 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:08:40:029 - debug: [BaseDriver] Waited for 2090 ms so far
+2017-10-31 20:08:40:546 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"useridInput","context":"","multiple":true}}
+2017-10-31 20:08:40:546 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"useridInput","context":"","multiple":true}}
+2017-10-31 20:08:40:546 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:08:40:546 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:08:40:546 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'useridInput' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:08:40:546 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:40:546 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:40:546 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:40:546 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=useridInput]
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:40:577 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[DESCRIPTION=useridInput, INSTANCE=0]
+2017-10-31 20:08:40:599 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:08:40:599 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'useridInput' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:08:40:599 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:40:599 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:40:599 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:40:599 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:40:599 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:40:599 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:40:599 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:40:599 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:40:630 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:40:630 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:40:630 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:40:630 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=useridInput]
+2017-10-31 20:08:40:630 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:40:630 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:40:630 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:40:630 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[DESCRIPTION=useridInput, INSTANCE=0]
+2017-10-31 20:08:40:646 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:08:40:646 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:08:40:646 - debug: [BaseDriver] Waited for 2707 ms so far
+2017-10-31 20:08:41:163 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"useridInput","context":"","multiple":true}}
+2017-10-31 20:08:41:163 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"useridInput","context":"","multiple":true}}
+2017-10-31 20:08:41:163 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:08:41:163 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:08:41:163 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'useridInput' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:08:41:163 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:41:163 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:41:163 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:163 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:41:178 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:41:178 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:41:178 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:178 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:41:199 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:41:199 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:41:199 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:200 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=useridInput]
+2017-10-31 20:08:41:201 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:41:201 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:41:201 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:201 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[DESCRIPTION=useridInput, INSTANCE=0]
+2017-10-31 20:08:41:201 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:08:41:201 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'useridInput' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:08:41:201 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:41:201 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:41:201 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:201 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:41:216 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:41:216 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:41:216 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:216 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:41:263 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:41:263 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:41:263 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:263 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=useridInput]
+2017-10-31 20:08:41:263 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:41:263 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:41:263 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:263 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[DESCRIPTION=useridInput, INSTANCE=0]
+2017-10-31 20:08:41:279 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:08:41:279 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:08:41:279 - debug: [BaseDriver] Waited for 3340 ms so far
+2017-10-31 20:08:41:796 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"useridInput","context":"","multiple":true}}
+2017-10-31 20:08:41:800 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"useridInput","context":"","multiple":true}}
+2017-10-31 20:08:41:800 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:08:41:800 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:08:41:800 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'useridInput' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:08:41:800 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:41:800 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:41:800 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:800 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/useridInput]
+2017-10-31 20:08:41:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:41:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:41:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=android:id/useridInput]
+2017-10-31 20:08:41:981 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:41:981 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=useridInput]
+2017-10-31 20:08:41:981 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:41:981 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=useridInput]
+2017-10-31 20:08:41:981 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-10-31 20:08:41:981 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=useridInput]
+2017-10-31 20:08:42:018 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:42:018 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[DESCRIPTION=useridInput]
+2017-10-31 20:08:42:018 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:08:42:018 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[DESCRIPTION=useridInput, INSTANCE=0]
+2017-10-31 20:08:42:050 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"3"}]}
+2017-10-31 20:08:42:050 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:08:42:050 - debug: [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"3"}]
+2017-10-31 20:08:42:065 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 4124 ms - 89 
+2017-10-31 20:08:42:081 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:42:081 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:42:081 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:42:081 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:08:42:097 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:42:098 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:42:098 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:42:099 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:08:42:118 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:42:118 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:42:118 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:42:118 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:08:42:134 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:08:42:134 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:42:134 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:08:42:134 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 2 ms - 1066 
+2017-10-31 20:08:42:150 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/appium/device/press_keycode {"keycode":4}
+2017-10-31 20:08:42:150 - debug: [MJSONWP] Calling AppiumDriver.pressKeyCode() with args: [4,null,null,null,"f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:08:42:150 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"pressKeyCode","params":{"keycode":4,"metastate":null}}
+2017-10-31 20:08:42:150 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"pressKeyCode","params":{"keycode":4,"metastate":null}}
+2017-10-31 20:08:42:150 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:08:42:150 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: pressKeyCode
+2017-10-31 20:08:42:181 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2017-10-31 20:08:42:181 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:08:42:181 - debug: [MJSONWP] Responding to client with driver.pressKeyCode() result: true
+2017-10-31 20:08:42:181 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/appium/device/press_keycode 200 34 ms - 76 
+2017-10-31 20:09:27:725 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/timeouts {"type":"implicit","ms":0}
+2017-10-31 20:09:27:725 - debug: [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:27:725 - debug: [BaseDriver] Set implicit wait to 0ms
+2017-10-31 20:09:27:725 - debug: [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-10-31 20:09:27:725 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/timeouts 200 2 ms - 76 
+2017-10-31 20:09:27:741 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:27:741 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:27:741 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:27:741 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:27:741 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:27:741 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:27:741 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:27:741 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:27:741 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:27:741 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:27:741 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:27:741 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:27:741 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:27:741 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:27:857 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:27:857 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:27:857 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:27:857 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:27:857 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:27:857 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:27:877 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:27:877 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:27:877 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:27:877 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 139 ms - 74 
+2017-10-31 20:09:28:411 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:28:411 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:28:411 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:28:411 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:28:411 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:28:411 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:28:411 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:28:411 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:28:411 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:28:411 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:28:411 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:28:411 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:28:411 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:28:411 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:28:527 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:28:527 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:28:527 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:28:527 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:28:527 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:28:527 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:28:558 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:28:558 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:28:558 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:28:558 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 148 ms - 74 
+2017-10-31 20:09:29:075 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:29:075 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:29:075 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:29:075 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:29:075 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:29:075 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:29:075 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:29:075 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:29:075 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:29:075 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:29:075 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:075 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:075 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:29:075 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:197 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:29:197 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:29:197 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:197 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:197 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:29:197 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:228 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:29:228 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:29:228 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:29:228 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 156 ms - 74 
+2017-10-31 20:09:29:745 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:29:745 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:29:745 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:29:745 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:29:745 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:29:745 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:29:745 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:29:745 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:29:745 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:29:745 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:29:745 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:745 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:745 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:29:745 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:761 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:29:761 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:29:761 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:761 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:761 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:29:761 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:29:793 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:29:794 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:29:794 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:29:795 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 47 ms - 74 
+2017-10-31 20:09:30:331 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:30:331 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:30:331 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:30:331 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:30:331 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:30:331 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:30:331 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:30:331 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:30:331 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:30:331 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:30:331 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:331 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:331 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:30:331 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:347 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:30:347 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:30:347 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:347 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:347 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:30:347 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:363 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:30:363 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:30:363 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:30:378 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 45 ms - 74 
+2017-10-31 20:09:30:897 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:30:897 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:30:898 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:30:898 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:30:898 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:30:898 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:30:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:30:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:30:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:30:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:30:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:30:902 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:917 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:30:917 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:30:917 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:917 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:917 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:30:917 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:30:949 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:30:949 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:30:949 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:30:949 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 53 ms - 74 
+2017-10-31 20:09:31:465 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:31:465 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:31:465 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:31:465 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:31:465 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:31:465 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:31:465 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:31:465 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:31:465 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:31:465 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:31:465 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:31:465 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:31:465 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:31:465 - debug: [AndroidBootstrap] [UIAUTO STDOUT] [APPIUM-UIAUTO] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_sta
+2017-10-31 20:09:31:465 - debug: [AndroidBootstrap] [UIAUTO STDOUT] rt_btn][/APPIUM-UIAUTO]
+2017-10-31 20:09:31:481 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:31:481 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:31:481 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:31:481 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:31:481 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:31:481 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:31:603 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:31:603 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:31:603 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:31:619 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 152 ms - 74 
+2017-10-31 20:09:32:135 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:32:135 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:32:135 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:32:135 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:32:135 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:32:135 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:32:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:32:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:32:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:32:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:32:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:32:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:32:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:32:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:32:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:235 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:32:235 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:32:235 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:32:235 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 110 ms - 74 
+2017-10-31 20:09:32:782 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:32:782 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:32:782 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:32:782 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:32:782 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:32:782 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:32:782 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:32:782 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:32:782 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:32:782 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:32:782 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:782 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:782 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:32:782 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:804 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:32:804 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:32:804 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:804 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:804 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:32:804 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:32:835 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:32:835 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:32:835 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:32:835 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 57 ms - 74 
+2017-10-31 20:09:33:366 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:33:366 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:33:366 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:33:366 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:33:366 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:33:366 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:33:366 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:33:366 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:33:366 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:33:366 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:33:366 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:33:366 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:33:366 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:33:366 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:33:382 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:33:382 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:33:382 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:33:382 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:33:382 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:33:382 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:33:522 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:33:522 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:33:523 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:33:523 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 155 ms - 74 
+2017-10-31 20:09:34:051 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:34:051 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:34:051 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:34:051 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:34:051 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:34:051 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:34:051 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:34:051 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:34:051 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:34:051 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:34:051 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:051 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:051 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:34:051 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:082 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:34:082 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:34:082 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:082 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:082 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:34:082 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:150 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:34:150 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:34:150 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:34:150 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 111 ms - 74 
+2017-10-31 20:09:34:683 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:34:683 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:34:683 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:34:683 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:34:683 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:34:683 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:34:683 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:34:683 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:34:683 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:34:683 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:34:683 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:683 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:683 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:34:683 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:802 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:34:802 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:34:803 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:803 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:803 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:34:803 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:34:821 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:34:821 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:34:821 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:34:821 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 142 ms - 74 
+2017-10-31 20:09:35:336 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:35:336 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:35:336 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:35:336 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:35:336 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:35:336 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:35:336 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:35:336 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:35:336 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:35:336 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:35:336 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:35:336 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:35:336 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:35:336 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:35:352 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:35:352 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:35:352 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:35:352 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:35:352 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:35:352 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:35:383 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:35:383 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:35:383 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:35:383 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 48 ms - 74 
+2017-10-31 20:09:35:920 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:35:920 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:35:920 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:35:920 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:35:920 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:35:920 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:35:920 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:35:920 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:35:920 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:35:920 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:35:920 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:35:920 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:35:920 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:35:920 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:36:002 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:36:002 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:36:002 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:36:002 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:36:002 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:36:002 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:37:351 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:37:351 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:37:351 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:37:351 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 1438 ms - 74 
+2017-10-31 20:09:37:883 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:37:883 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:37:883 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:37:883 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:37:883 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:37:883 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:37:883 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":true}}
+2017-10-31 20:09:37:883 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:37:883 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:37:883 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:37:883 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:37:883 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:37:883 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:37:883 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:37:904 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-10-31 20:09:37:904 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:37:920 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"4"}]}
+2017-10-31 20:09:37:920 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:37:920 - debug: [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"4"}]
+2017-10-31 20:09:37:920 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 50 ms - 89 
+2017-10-31 20:09:37:951 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:37:951 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:37:951 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:37:951 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 3 ms - 1066 
+2017-10-31 20:09:37:967 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:37:967 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:37:967 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:37:967 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:37:983 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:37:983 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:37:983 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:37:983 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:37:999 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:38:000 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:38:000 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:38:001 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:38:020 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn"}
+2017-10-31 20:09:38:020 - debug: [MJSONWP] Calling AppiumDriver.findElement() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:38:020 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:38:020 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:38:020 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:38:020 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":false}}
+2017-10-31 20:09:38:020 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn","context":"","multiple":false}}
+2017-10-31 20:09:38:020 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:38:020 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:38:020 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn' using 'ID' with the contextId: '' multiple: false
+2017-10-31 20:09:38:020 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn]
+2017-10-31 20:09:38:051 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"5"}}
+2017-10-31 20:09:38:051 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:38:051 - debug: [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"5"}
+2017-10-31 20:09:38:051 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element 200 34 ms - 87 
+2017-10-31 20:09:38:067 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:38:067 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:38:067 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:38:067 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:38:082 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:38:082 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:38:082 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:38:082 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:38:099 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:38:100 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:38:100 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:38:101 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:38:120 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:38:120 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:38:120 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:38:120 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 3 ms - 1066 
+2017-10-31 20:09:38:135 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element/5/click {"id":"5"}
+2017-10-31 20:09:38:135 - debug: [MJSONWP] Calling AppiumDriver.click() with args: ["5","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:38:135 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"5"}}
+2017-10-31 20:09:38:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"5"}}
+2017-10-31 20:09:38:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:38:135 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2017-10-31 20:09:39:205 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2017-10-31 20:09:39:205 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:39:205 - debug: [MJSONWP] Responding to client with driver.click() result: true
+2017-10-31 20:09:39:205 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/element/5/click 200 1071 ms - 76 
+2017-10-31 20:09:39:220 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1"}
+2017-10-31 20:09:39:220 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:39:220 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:39:220 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:39:220 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:39:220 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","context":"","multiple":true}}
+2017-10-31 20:09:39:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","context":"","multiple":true}}
+2017-10-31 20:09:39:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:39:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:39:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:39:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:39:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:39:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:39:220 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:39:705 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:39:706 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:39:706 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:39:706 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:39:706 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:39:706 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:40:204 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:40:205 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:40:206 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:40:206 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 984 ms - 74 
+2017-10-31 20:09:40:737 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1"}
+2017-10-31 20:09:40:737 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:40:737 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:40:737 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:40:737 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:40:737 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","context":"","multiple":true}}
+2017-10-31 20:09:40:737 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","context":"","multiple":true}}
+2017-10-31 20:09:40:737 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:40:737 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:40:737 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:40:737 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:40:737 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:40:737 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:40:737 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:40:853 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-10-31 20:09:40:853 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:40:853 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:40:853 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:40:853 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:40:853 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:40:868 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-10-31 20:09:40:868 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:40:868 - debug: [MJSONWP] Responding to client with driver.findElements() result: []
+2017-10-31 20:09:40:868 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 135 ms - 74 
+2017-10-31 20:09:41:401 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1"}
+2017-10-31 20:09:41:401 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:41:402 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:41:402 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:41:402 - debug: [BaseDriver] Waiting up to 0 ms for condition
+2017-10-31 20:09:41:402 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","context":"","multiple":true}}
+2017-10-31 20:09:41:405 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","context":"","multiple":true}}
+2017-10-31 20:09:41:405 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:41:405 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:41:405 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:41:405 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:41:405 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:41:405 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:41:405 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:43:096 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-10-31 20:09:43:096 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:44:106 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"6"}]}
+2017-10-31 20:09:44:106 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:44:106 - debug: [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"6"}]
+2017-10-31 20:09:44:106 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 2719 ms - 89 
+2017-10-31 20:09:44:138 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:44:138 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:44:138 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:44:138 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:44:153 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:44:153 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:44:153 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:44:153 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:44:169 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:44:169 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:44:169 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:44:169 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:44:185 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:44:185 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:44:185 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:44:185 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 2 ms - 1066 
+2017-10-31 20:09:44:203 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/timeouts {"type":"implicit","ms":10}
+2017-10-31 20:09:44:204 - debug: [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",10,"f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:44:204 - debug: [BaseDriver] Set implicit wait to 10ms
+2017-10-31 20:09:44:205 - debug: [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-10-31 20:09:44:205 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/timeouts 200 2 ms - 76 
+2017-10-31 20:09:44:939 - info: [HTTP] --> POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements {"using":"id","value":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1"}
+2017-10-31 20:09:44:939 - debug: [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:44:939 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:44:939 - debug: [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-10-31 20:09:44:939 - debug: [BaseDriver] Waiting up to 10 ms for condition
+2017-10-31 20:09:44:939 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","context":"","multiple":true}}
+2017-10-31 20:09:44:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1","context":"","multiple":true}}
+2017-10-31 20:09:44:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-10-31 20:09:44:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-10-31 20:09:44:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1' using 'ID' with the contextId: '' multiple: true
+2017-10-31 20:09:44:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:44:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:44:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-10-31 20:09:44:939 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:45:086 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-10-31 20:09:45:086 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1]
+2017-10-31 20:09:45:108 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"7"}]}
+2017-10-31 20:09:45:108 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:45:108 - debug: [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"7"}]
+2017-10-31 20:09:45:108 - info: [HTTP] <-- POST /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde/elements 200 168 ms - 89 
+2017-10-31 20:09:45:123 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:45:123 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:45:123 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:45:123 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:45:139 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:45:139 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:45:139 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:45:139 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:45:155 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:45:155 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:45:155 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:45:155 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:45:170 - info: [HTTP] --> GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:45:170 - debug: [MJSONWP] Calling AppiumDriver.getSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:45:170 - debug: [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039"},"app":"c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk","appPackage":"com.oxagile.GuardianAssist.PatientDev","appActivity":"com.guardianassist.patient.login.LoginActivity","platformVersion":"5.0.1","browserName":"","platformName":"Android","deviceName":"4d00e7d3b654a039","deviceUDID":"4d00e7d3b654a039","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung"}
+2017-10-31 20:09:45:170 - info: [HTTP] <-- GET /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 1 ms - 1066 
+2017-10-31 20:09:45:603 - info: [HTTP] --> DELETE /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde {}
+2017-10-31 20:09:45:604 - debug: [MJSONWP] Calling AppiumDriver.deleteSession() with args: ["f044adb6-462d-489b-8e37-3aeb70be8dde"]
+2017-10-31 20:09:45:604 - debug: [BaseDriver] Event 'quitSessionRequested' logged at 1509469785604 (20:09:45 GMT+0300 (Belarus Standard Time))
+2017-10-31 20:09:45:605 - info: [Appium] Removing session f044adb6-462d-489b-8e37-3aeb70be8dde from our master session list
+2017-10-31 20:09:45:605 - debug: [AndroidDriver] Shutting down Android driver
+2017-10-31 20:09:45:606 - debug: [ADB] Getting connected devices...
+2017-10-31 20:09:45:640 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:09:45:640 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","am","force-stop","com.oxagile.GuardianAssist.PatientDev"]
+2017-10-31 20:09:46:471 - debug: [ADB] Pressing the HOME button
+2017-10-31 20:09:46:471 - debug: [ADB] Getting connected devices...
+2017-10-31 20:09:46:509 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:09:46:509 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","input","keyevent",3]
+2017-10-31 20:09:47:173 - debug: [AndroidBootstrap] Sending command to android: {"cmd":"shutdown"}
+2017-10-31 20:09:47:173 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"shutdown"}
+2017-10-31 20:09:47:173 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type SHUTDOWN
+2017-10-31 20:09:47:173 - debug: [AndroidBootstrap] Received command result from bootstrap
+2017-10-31 20:09:47:173 - debug: [UiAutomator] Shutting down UiAutomator
+2017-10-31 20:09:47:173 - debug: [UiAutomator] Moving to state 'stopping'
+2017-10-31 20:09:47:173 - debug: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
+2017-10-31 20:09:47:188 - debug: [UiAutomator] UiAutomator shut down normally
+2017-10-31 20:09:47:188 - debug: [UiAutomator] Moving to state 'stopped'
+2017-10-31 20:09:47:188 - debug: [ADB] Attempting to kill all uiautomator processes
+2017-10-31 20:09:47:188 - debug: [ADB] Getting all processes with uiautomator
+2017-10-31 20:09:47:188 - debug: [ADB] Getting connected devices...
+2017-10-31 20:09:47:226 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:09:47:226 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","ps"]
+2017-10-31 20:09:47:388 - info: [ADB] No uiautomator process found to kill, continuing...
+2017-10-31 20:09:47:388 - debug: [UiAutomator] Moving to state 'stopped'
+2017-10-31 20:09:47:388 - debug: [Logcat] Stopping logcat capture
+2017-10-31 20:09:47:388 - debug: [ADB] Getting connected devices...
+2017-10-31 20:09:47:426 - debug: [ADB] 2 device(s) connected
+2017-10-31 20:09:47:426 - debug: [ADB] Running 'c:\Users\shukhovvg\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00e7d3b654a039","shell","am","force-stop","io.appium.unlock"]
+2017-10-31 20:09:48:072 - debug: [AndroidDriver] Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
+2017-10-31 20:09:48:072 - debug: [BaseDriver] Event 'quitSessionFinished' logged at 1509469788072 (20:09:48 GMT+0300 (Belarus Standard Time))
+2017-10-31 20:09:48:072 - debug: [MJSONWP] Received response: null
+2017-10-31 20:09:48:072 - debug: [MJSONWP] But deleting session, so not returning
+2017-10-31 20:09:48:072 - debug: [MJSONWP] Responding to client with driver.deleteSession() result: null
+2017-10-31 20:09:48:072 - info: [HTTP] <-- DELETE /wd/hub/session/f044adb6-462d-489b-8e37-3aeb70be8dde 200 2475 ms - 76 

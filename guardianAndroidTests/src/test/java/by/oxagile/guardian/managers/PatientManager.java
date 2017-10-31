@@ -4,6 +4,9 @@ import by.oxagile.guardian.helpers.CallsHelper;
 import by.oxagile.guardian.helpers.LoginHelper;
 import by.oxagile.guardian.helpers.PatientHelper;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -22,28 +25,38 @@ public class PatientManager {
         if (patientWD == null) {
             File app = new File ("c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk");
 
-            /*DesiredCapabilities capabilities = new DesiredCapabilities();
+//            //SGS7 (work - #101313):
+//            DesiredCapabilities capabilities = new DesiredCapabilities();
+//            capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
+//            capabilities.setCapability("deviceName", "ad0c1603a9064c6b0b");
+//            capabilities.setCapability("platformVersion", "7.0");
+//            capabilities.setCapability("platformName", "Android");
+//            capabilities.setCapability("app", app.getAbsolutePath());
+//            capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
+//            capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
+
+            //SGS4 (my personal):
+            DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-            //SGS4 (my personal)
             capabilities.setCapability("deviceName", "4d00e7d3b654a039");
             capabilities.setCapability("platformVersion", "5.0.1");
             capabilities.setCapability("platformName", "Android");
             capabilities.setCapability("app", app.getAbsolutePath());
             capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
-            capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");*/
-
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-            //SGS4 (my personal)
-            capabilities.setCapability("deviceName", "ad0c1603a9064c6b0b");
-            capabilities.setCapability("platformVersion", "7.0");
-            capabilities.setCapability("platformName", "Android");
-            capabilities.setCapability("app", app.getAbsolutePath());
-            capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
             capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
 
+            AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder()
+                    .usingAnyFreePort()
+                    .withLogFile(new File("./src/test/resources/appiumLogs/appiumPatient.log"))
+                    .withArgument(GeneralServerFlag.LOG_LEVEL, "error:debug")
+                    .withArgument(GeneralServerFlag.LOG_TIMESTAMP)
+                    .withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
+            AppiumDriverLocalService service = AppiumDriverLocalService.buildService(serviceBuilder);
+
             try {
-                patientWD = new AndroidDriver(new URL("http://192.168.33.114:4444/wd/hub"),capabilities);
+//                old driver init variant (using "selenium server + nodes" architecture):
+//                patientWD = new AndroidDriver(new URL("http://192.168.33.114:4444/wd/hub"),capabilities);
+                patientWD = new AndroidDriver(service, capabilities);
                 patientWD.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             } catch (Exception e) {
                 e.printStackTrace();

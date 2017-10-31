@@ -1,3 +1,7 @@
+--use-fake-ui-for-media-stream  -  avoids the need to grant camera/microphone permissions.
+
+--use-fake-device-for-media-stream  -  feeds a test pattern to getUserMedia() instead of live camera input.
+
 java -jar selenium-server-standalone-3.5.3.jar -port 4444 -role hub
 
 appium --nodeconfig c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\test\resources\SGS4.json -p 4725
@@ -7,7 +11,6 @@ appium --nodeconfig c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\t
 appium --nodeconfig c:\Users\shukhovvg\guardianAssist\guardianAndroidTests\src\test\resources\SGS7_And7.json -p 4735
 
 
---use-fake-ui-for-media-stream  -  avoids the need to grant camera/microphone permissions.
 
---use-fake-device-for-media-stream  -  feeds a test pattern to getUserMedia() instead of live camera input.
+
 

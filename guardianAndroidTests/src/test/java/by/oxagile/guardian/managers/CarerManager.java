@@ -4,6 +4,9 @@ import by.oxagile.guardian.helpers.CallsHelper;
 import by.oxagile.guardian.helpers.CarerHelper;
 import by.oxagile.guardian.helpers.LoginHelper;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -22,9 +25,9 @@ public class CarerManager {
         if (carerWD == null) {
             File app = new File ("c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk");
 
+            //SGS7 (work - #101314):
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-            //SGS7 (work - #101314)
             capabilities.setCapability("deviceName", "ce12160cbab93cae0c");
             capabilities.setCapability("platformVersion", "6.0.1");
             capabilities.setCapability("platformName", "Android");
@@ -32,8 +35,18 @@ public class CarerManager {
             capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
             capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
 
+            AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder()
+                    .usingAnyFreePort()
+                    .withLogFile(new File("./src/test/resources/appiumLogs/appiumCarer.log"))
+                    .withArgument(GeneralServerFlag.LOG_LEVEL, "error:debug")
+                    .withArgument(GeneralServerFlag.LOG_TIMESTAMP)
+                    .withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
+            AppiumDriverLocalService service = AppiumDriverLocalService.buildService(serviceBuilder);
+
             try {
-                carerWD = new AndroidDriver(new URL("http://192.168.33.114:4444/wd/hub"),capabilities);
+//                old driver init variant (using 'selenium server + nodes' architecture):
+//                carerWD = new AndroidDriver(new URL("http://192.168.33.114:4444/wd/hub"),capabilities);
+                carerWD = new AndroidDriver(service, capabilities);
                 carerWD.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             } catch (Exception e) {
                 e.printStackTrace();
