@@ -60,7 +60,7 @@ public class CallsTests extends TestBase {
         Assert.assertTrue(carer.calls().getTopLeftVideoStreamID().isEmpty());
     }
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void initiatorDeclinesCall() {
         carer.login().toAppAs(true,"1234571");
         patient.login().toAppAs(false, "1111");
@@ -76,7 +76,7 @@ public class CallsTests extends TestBase {
         Assert.assertEquals(assist.mongoDB().getLastCallStatus(), "ORIGINATOR_RESET");
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void initiatorLeavesCall() {
         patient.login().toAppAs(false, "1111");
         carer.login().toAppAs(true,"1234571");
