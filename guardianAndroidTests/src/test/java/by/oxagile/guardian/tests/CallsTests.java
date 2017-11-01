@@ -89,7 +89,7 @@ public class CallsTests extends TestBase {
         Assert.assertTrue(assist.mongoDB().getLastCallStatus().equals("COMPLETED"));
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void recieverDeclinesCall() {
         patient.login().toAppAs(false, "1111");
         carer.login().toAppAs(true,"1234571");
