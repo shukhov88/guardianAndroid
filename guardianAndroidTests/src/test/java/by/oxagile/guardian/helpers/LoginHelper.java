@@ -3,11 +3,9 @@ package by.oxagile.guardian.helpers;
 import by.oxagile.guardian.managers.CarerManager;
 import by.oxagile.guardian.managers.PatientManager;
 import by.oxagile.guardian.managers.Wait;
-import io.appium.java_client.android.Activity;
+import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginHelper extends BaseHelper {
 
@@ -30,8 +28,10 @@ public class LoginHelper extends BaseHelper {
 
     public void as(String mobilePhone) {
 
-        androidDriver.findElement(LOCATORS.loginField).sendKeys(mobilePhone);
-        androidDriver.findElement(LOCATORS.loginButton).click();
+        ((AndroidElement) androidDriver.findElement(LOCATORS.loginFirstNameField)).setValue("1");
+        ((AndroidElement) androidDriver.findElement(LOCATORS.loginLastNameField)).setValue("1");
+        ((AndroidElement) androidDriver.findElement(LOCATORS.loginPhoneField)).setValue(mobilePhone);
+        androidDriver.findElement(LOCATORS.loginNextButton).click();
     }
 
     public void skipUberSignin() {
