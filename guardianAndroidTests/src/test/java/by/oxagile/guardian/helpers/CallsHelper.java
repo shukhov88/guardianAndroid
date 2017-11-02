@@ -107,7 +107,7 @@ public class CallsHelper extends BaseHelper {
     }
 
     public void timeOut() {
-        WebDriverWait wait = new WebDriverWait(androidDriver, Wait.FOR_CALL_TO_TIMEOUT.getValue());
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("com.oxagile.GuardianAssist.PatientDev:id/ra_driver_status")));
+        waitForElementPresence(LOCATORS.acceptCallButton, Wait.FOR_INCOMING_CALL.getValue());
+        waitForElementPresence(LOCATORS.startCallButton, Wait.FOR_CALL_TO_TIMEOUT.getValue());
     }
 }

@@ -9,10 +9,11 @@ import java.io.IOException;
 
 public class CallsTests extends TestBase {
 
-    By startCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn");
-    By onCallInviteButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_invite_btn");
-    By smallLeftVideoWindow = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1");
-    By acceptCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn");
+    private By startCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn");
+    private By onCallInviteButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_invite_btn");
+    private By smallLeftVideoWindow = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1");
+    private By acceptCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn");
+    private By addToCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/add_to_call_btn");
 
     @Test (enabled = false)
     public void recieverAcceptsCall() {
@@ -41,7 +42,7 @@ public class CallsTests extends TestBase {
         Assert.assertTrue(patient.calls().getTopLeftVideoStreamID().isEmpty());
     }
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void patientAssistVideoStreamsLocation() throws IOException {
         patient.login().toAppAs(false, "1111");
         patient.calls().dialTo("ASSIST");
@@ -53,7 +54,7 @@ public class CallsTests extends TestBase {
         Assert.assertEquals(patient.calls().getTopLeftVideoStreamID(), assist.getProperty("Assist.ID"));
     }
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void carerAssistVideoStreamsLocation() throws IOException {
         carer.login().toAppAs(true,"1234571");
         carer.calls().dialTo("Guardian Assist");
@@ -101,8 +102,8 @@ public class CallsTests extends TestBase {
         carer.calls().dialTo("Andrew Leigh");
         patient.calls().decline();
 
-        Assert.assertTrue(patient.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name")));
-        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")));
+        Assert.assertTrue(patient.helper().isElementPresent(startCallButton));
+        Assert.assertTrue(carer.helper().isElementPresent(startCallButton));
         Assert.assertTrue(assist.mongoDB().getLastCallStatus().equals("RECIPIENT_REJECTED"));
     }
 
@@ -113,9 +114,9 @@ public class CallsTests extends TestBase {
         carer.calls().dialTo("Andrew Leigh");
         patient.calls().timeOut();
 
-        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name")));
-        Assert.assertTrue(patient.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")));
-        Assert.assertTrue(assist.mongoDB().getLastCallStatus().equals("COMPLETED"));
+        Assert.assertTrue(carer.helper().isElementPresent(startCallButton));
+        Assert.assertTrue(patient.helper().isElementPresent(startCallButton));
+        Assert.assertTrue(assist.mongoDB().getLastCallStatus().equals("UNANSWERED"));
     }
 
     @Test (enabled = false)
@@ -126,9 +127,9 @@ public class CallsTests extends TestBase {
         patient.calls().accept();
         patient.calls().leave();
 
-        Assert.assertTrue(patient.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name")));
-        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")));
-        Assert.assertTrue(assist.mongoDB().getLastCallStatus().equals("UNANSWERED"));
+        Assert.assertTrue(patient.helper().isElementPresent(startCallButton));
+        Assert.assertTrue(carer.helper().isElementPresent(startCallButton));
+        Assert.assertTrue(assist.mongoDB().getLastCallStatus().equals("COMPLETED"));
     }
 
     @Test (enabled = false)
@@ -139,6 +140,6 @@ public class CallsTests extends TestBase {
         patient.calls().accept();
         carer.calls().tapInviteButton();
 
-        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/add_to_call_btn")));
+        Assert.assertTrue(carer.helper().isElementPresent(addToCallButton));
     }
 }
