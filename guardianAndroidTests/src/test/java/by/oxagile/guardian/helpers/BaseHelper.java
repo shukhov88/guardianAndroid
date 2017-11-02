@@ -18,7 +18,7 @@ public class BaseHelper {
     protected CarerManager carer;
     protected PatientManager patient;
     protected AndroidDriver androidDriver;
-    protected AssistManager assist;
+    protected AssistManager assistManager;
     protected WebDriver webDriver;
 
     public BaseHelper(CarerManager carerManager) {
@@ -28,12 +28,12 @@ public class BaseHelper {
 
     public BaseHelper(PatientManager patientManager) {
         this.patient = patientManager;
-        this.androidDriver = patientManager.getPatientDriver();
+        this.androidDriver = patient.getPatientDriver();
     }
 
     public BaseHelper(AssistManager assist) {
-        this.assist = assist;
-        this.webDriver = assist.getDriver();
+        this.assistManager = assist;
+        this.webDriver = assistManager.getDriver();
     }
 
     protected void click(By locator) {

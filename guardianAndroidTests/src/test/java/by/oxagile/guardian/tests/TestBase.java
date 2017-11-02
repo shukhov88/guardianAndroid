@@ -7,7 +7,6 @@ import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 
 public class TestBase {
 
@@ -24,9 +23,9 @@ public class TestBase {
 
     @AfterSuite
     public void tearDown() {
+        assist.stop();
         patient.stop();
         carer.stop();
-        assist.stop();
     }
 
     @BeforeMethod
@@ -34,5 +33,4 @@ public class TestBase {
         patient.resetApp();
         carer.resetApp();
     }
-
 }

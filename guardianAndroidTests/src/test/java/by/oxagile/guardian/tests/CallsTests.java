@@ -11,7 +11,7 @@ public class CallsTests extends TestBase {
 
     By startCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn");
     By onCallInviteButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_invite_btn");
-    By smallLeftVodeoWindow = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1");
+    By smallLeftVideoWindow = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1");
     By acceptCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn");
 
     @Test (enabled = false)
@@ -22,7 +22,7 @@ public class CallsTests extends TestBase {
         patient.calls().accept();
 
         Assert.assertTrue(carer.helper().isElementPresent(onCallInviteButton));
-        Assert.assertTrue(patient.helper().isElementPresent(smallLeftVodeoWindow));
+        Assert.assertTrue(patient.helper().isElementPresent(smallLeftVideoWindow));
         Assert.assertEquals(assist.mongoDB().getLastCallStatus(), "ONGOING");
     }
 
@@ -41,7 +41,7 @@ public class CallsTests extends TestBase {
         Assert.assertTrue(patient.calls().getTopLeftVideoStreamID().isEmpty());
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void patientAssistVideoStreamsLocation() throws IOException {
         patient.login().toAppAs(false, "1111");
         patient.calls().dialTo("ASSIST");
@@ -53,7 +53,7 @@ public class CallsTests extends TestBase {
         Assert.assertEquals(patient.calls().getTopLeftVideoStreamID(), assist.getProperty("Assist.ID"));
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void carerAssistVideoStreamsLocation() throws IOException {
         carer.login().toAppAs(true,"1234571");
         carer.calls().dialTo("Guardian Assist");
@@ -81,7 +81,7 @@ public class CallsTests extends TestBase {
         Assert.assertEquals(assist.mongoDB().getLastCallStatus(), "ORIGINATOR_RESET");
     }
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void initiatorLeavesCall() {
         patient.login().toAppAs(false, "1111");
         carer.login().toAppAs(true,"1234571");

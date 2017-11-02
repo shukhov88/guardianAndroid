@@ -28,6 +28,7 @@ public class CarerManager {
             //SGS7 (work - #101314):
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
+            capabilities.setCapability("newCommandTimeout", "200");
             capabilities.setCapability("deviceName", "ce12160cbab93cae0c");
             capabilities.setCapability("platformVersion", "6.0.1");
             capabilities.setCapability("platformName", "Android");
@@ -37,7 +38,7 @@ public class CarerManager {
 
             AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder()
                     .usingAnyFreePort()
-                    .withLogFile(new File("./src/test/resources/appiumLogs/appiumCarer.log"))
+                    .withLogFile(new File("./src/test/resources/appiumLogs/appiumCarer_" + System.currentTimeMillis() + ".log"))
                     .withArgument(GeneralServerFlag.LOG_LEVEL, "error:debug")
                     .withArgument(GeneralServerFlag.LOG_TIMESTAMP)
                     .withArgument(GeneralServerFlag.LOCAL_TIMEZONE);

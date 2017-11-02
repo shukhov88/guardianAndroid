@@ -38,6 +38,7 @@ public class PatientManager {
             //SGS4 (my personal):
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
+            capabilities.setCapability("newCommandTimeout", "200");
             capabilities.setCapability("deviceName", "4d00e7d3b654a039");
             capabilities.setCapability("platformVersion", "5.0.1");
             capabilities.setCapability("platformName", "Android");
@@ -47,7 +48,7 @@ public class PatientManager {
 
             AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder()
                     .usingAnyFreePort()
-                    .withLogFile(new File("./src/test/resources/appiumLogs/appiumPatient.log"))
+                    .withLogFile(new File("./src/test/resources/appiumLogs/appiumPatient_" + System.currentTimeMillis() + ".log"))
                     .withArgument(GeneralServerFlag.LOG_LEVEL, "error:debug")
                     .withArgument(GeneralServerFlag.LOG_TIMESTAMP)
                     .withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
