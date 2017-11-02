@@ -81,7 +81,7 @@ public class CallsTests extends TestBase {
         Assert.assertEquals(assist.mongoDB().getLastCallStatus(), "ORIGINATOR_RESET");
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void initiatorLeavesCall() {
         patient.login().toAppAs(false, "1111");
         carer.login().toAppAs(true,"1234571");
@@ -94,7 +94,7 @@ public class CallsTests extends TestBase {
         Assert.assertTrue(assist.mongoDB().getLastCallStatus().equals("COMPLETED"));
     }
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void recieverDeclinesCall() {
         patient.login().toAppAs(false, "1111");
         carer.login().toAppAs(true,"1234571");

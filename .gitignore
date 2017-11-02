@@ -3,3 +3,5 @@ build/
 workspace.xml
 src/test/resources/
 **/*.apk
+**/*.properties
+guardianAndroidTests/src/test/resources/

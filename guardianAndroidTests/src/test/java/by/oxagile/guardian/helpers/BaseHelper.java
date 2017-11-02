@@ -3,19 +3,14 @@ package by.oxagile.guardian.helpers;
 import by.oxagile.guardian.managers.AssistManager;
 import by.oxagile.guardian.managers.CarerManager;
 import by.oxagile.guardian.managers.PatientManager;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidKeyCode;
-import io.appium.java_client.android.StartsActivity;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-import java.time.Duration;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
