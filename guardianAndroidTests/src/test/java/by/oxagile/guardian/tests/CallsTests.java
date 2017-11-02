@@ -101,7 +101,7 @@ public class CallsTests extends TestBase {
         Assert.assertTrue(assist.mongoDB().getLastCallStatus().equals("RECIPIENT_REJECTED"));
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void recieverTimeoutesCall() {
         patient.login().toAppAs(false, "1111");
         carer.login().toAppAs(true,"1234571");
