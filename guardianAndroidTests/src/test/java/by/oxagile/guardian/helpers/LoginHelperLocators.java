@@ -7,8 +7,10 @@ public class LoginHelperLocators {
 
     By allowPermission = By.id("com.android.packageinstaller:id/permission_allow_button");
     By proceedToPermissions = By.id("com.oxagile.GuardianAssist.PatientDev:id/loginPermissionsButton");
-    By loginField = By.id("com.oxagile.GuardianAssist.PatientDev:id/phoneET");
-    By loginButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/email_sign_in_button");
+    By loginFirstNameField = By.id("com.oxagile.GuardianAssist.PatientDev:id/login_edit_f_name");
+    By loginLastNameField = By.id("com.oxagile.GuardianAssist.PatientDev:id/login_edit_l_name");
+    By loginPhoneField = By.id("com.oxagile.GuardianAssist.PatientDev:id/login_edit_mobile");
+    By loginNextButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/email_sign_in_button");
     By uberLoginField = By.id("useridInput");
     By uberPassField = By.id("password");
     By uberOTP = By.id("verificationCode");

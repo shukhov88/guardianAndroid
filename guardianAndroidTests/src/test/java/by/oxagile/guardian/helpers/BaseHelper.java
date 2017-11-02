@@ -70,10 +70,6 @@ public class BaseHelper {
         new TouchAction(androidDriver).press(fromX, fromY).moveTo(element).release().perform();
     }*/
 
-    public boolean isElementPresent(By locator) {
-        return androidDriver.findElements(locator).size() == 1;
-    }
-
     public String getText(By locator) {
         return androidDriver.findElement(locator).getText();
     }
@@ -84,6 +80,11 @@ public class BaseHelper {
     }
 
     public void setImplicitlyWait(int seconds) {
-        androidDriver.manage().timeouts().implicitlyWait(seconds, TimeUnit.MILLISECONDS);
+        androidDriver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+    }
+
+    public boolean isElementPresent(By locator) {
+        setImplicitlyWait(10);
+        return androidDriver.findElements(locator).size() == 1;
     }
 }

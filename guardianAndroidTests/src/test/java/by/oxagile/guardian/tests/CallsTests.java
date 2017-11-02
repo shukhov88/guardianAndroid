@@ -9,6 +9,11 @@ import java.io.IOException;
 
 public class CallsTests extends TestBase {
 
+    By startCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn");
+    By onCallInviteButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_invite_btn");
+    By smallLeftVodeoWindow = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1");
+    By acceptCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn");
+
     @Test (enabled = false)
     public void recieverAcceptsCall() {
         patient.login().toAppAs(false, "1111");
@@ -16,9 +21,8 @@ public class CallsTests extends TestBase {
         carer.calls().dialTo("Andrew Leigh");
         patient.calls().accept();
 
-        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_invite_btn")));
-        Assert.assertTrue(patient.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1")));
-
+        Assert.assertTrue(carer.helper().isElementPresent(onCallInviteButton));
+        Assert.assertTrue(patient.helper().isElementPresent(smallLeftVodeoWindow));
         Assert.assertEquals(assist.mongoDB().getLastCallStatus(), "ONGOING");
     }
 
@@ -29,7 +33,8 @@ public class CallsTests extends TestBase {
         carer.calls().dialTo("Andrew Leigh");
         patient.calls().accept();
 
-        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_invite_btn")));
+
+        Assert.assertTrue(carer.helper().isElementPresent(onCallInviteButton));
         Assert.assertEquals(carer.calls().getCentralVideoStreamID(), assist.getProperty("1111.ID"));
         Assert.assertTrue(carer.calls().getTopLeftVideoStreamID().isEmpty());
         Assert.assertEquals(patient.calls().getCentralVideoStreamID(), assist.getProperty("1234571.ID"));
@@ -67,16 +72,16 @@ public class CallsTests extends TestBase {
         carer.calls().dialTo("Andrew Leigh");
         assist.mongoDB().getLastCallID();
 
-        Assert.assertTrue(patient.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn")));
+        Assert.assertTrue(patient.helper().isElementPresent(acceptCallButton));
 
         carer.calls().stopDialing();
 
-        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")));
-        Assert.assertTrue(patient.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/start_call_btn")));
+        Assert.assertTrue(carer.helper().isElementPresent(startCallButton));
+        Assert.assertTrue(patient.helper().isElementPresent(startCallButton));
         Assert.assertEquals(assist.mongoDB().getLastCallStatus(), "ORIGINATOR_RESET");
     }
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void initiatorLeavesCall() {
         patient.login().toAppAs(false, "1111");
         carer.login().toAppAs(true,"1234571");
@@ -84,12 +89,12 @@ public class CallsTests extends TestBase {
         patient.calls().accept();
         carer.calls().leave();
 
-        Assert.assertTrue(carer.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name")));
-        Assert.assertTrue(patient.helper().isElementPresent(By.id("com.oxagile.GuardianAssist.PatientDev:id/cell_name")));
+        Assert.assertTrue(carer.helper().isElementPresent(startCallButton));
+        Assert.assertTrue(patient.helper().isElementPresent(startCallButton));
         Assert.assertTrue(assist.mongoDB().getLastCallStatus().equals("COMPLETED"));
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void recieverDeclinesCall() {
         patient.login().toAppAs(false, "1111");
         carer.login().toAppAs(true,"1234571");
