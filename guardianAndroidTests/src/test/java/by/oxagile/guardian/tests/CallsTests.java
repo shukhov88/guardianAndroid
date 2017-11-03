@@ -14,12 +14,15 @@ public class CallsTests extends TestBase {
     private By smallLeftVideoWindow = By.id("com.oxagile.GuardianAssist.PatientDev:id/on_call_small_video_view_1");
     private By acceptCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/incoming_call_start_btn");
     private By addToCallButton = By.id("com.oxagile.GuardianAssist.PatientDev:id/add_to_call_btn");
+    private String andrewLeigh = "Andrew Leigh";
+    private String patientPhone = "1111";
+    private String carerPhone = "1234571";
 
     @Test (enabled = false)
     public void recieverAcceptsCall() {
-        patient.login().toAppAs(false, "1111");
-        carer.login().toAppAs(true,"1234571");
-        carer.calls().dialTo("Andrew Leigh");
+        patient.login().toAppAs(false, patientPhone);
+        carer.login().toAppAs(true,carerPhone);
+        carer.calls().dialTo(andrewLeigh);
         patient.calls().accept();
 
         Assert.assertTrue(carer.helper().isElementPresent(onCallInviteButton));
@@ -29,9 +32,9 @@ public class CallsTests extends TestBase {
 
     @Test (enabled = false)
     public void patientCarerVideoStreamsLocation() {
-        patient.login().toAppAs(false, "1111");
-        carer.login().toAppAs(true,"1234571");
-        carer.calls().dialTo("Andrew Leigh");
+        patient.login().toAppAs(false, patientPhone);
+        carer.login().toAppAs(true,carerPhone);
+        carer.calls().dialTo(andrewLeigh);
         patient.calls().accept();
 
 
@@ -44,7 +47,7 @@ public class CallsTests extends TestBase {
 
     @Test (enabled = false)
     public void patientAssistVideoStreamsLocation() throws IOException {
-        patient.login().toAppAs(false, "1111");
+        patient.login().toAppAs(false, patientPhone);
         patient.calls().dialTo("ASSIST");
         String callID = assist.mongoDB().getLastCallID();
         String token = assist.newHttpSession().joinCall(callID);
@@ -56,7 +59,7 @@ public class CallsTests extends TestBase {
 
     @Test (enabled = false)
     public void carerAssistVideoStreamsLocation() throws IOException {
-        carer.login().toAppAs(true,"1234571");
+        carer.login().toAppAs(true,carerPhone);
         carer.calls().dialTo("Guardian Assist");
         String callID = assist.mongoDB().getLastCallID();
         String token = assist.newHttpSession().joinCall(callID);
@@ -68,9 +71,9 @@ public class CallsTests extends TestBase {
 
     @Test (enabled = false)
     public void initiatorDeclinesCall() {
-        carer.login().toAppAs(true,"1234571");
-        patient.login().toAppAs(false, "1111");
-        carer.calls().dialTo("Andrew Leigh");
+        carer.login().toAppAs(true,carerPhone);
+        patient.login().toAppAs(false, patientPhone);
+        carer.calls().dialTo(andrewLeigh);
         assist.mongoDB().getLastCallID();
 
         Assert.assertTrue(patient.helper().isElementPresent(acceptCallButton));
@@ -84,9 +87,9 @@ public class CallsTests extends TestBase {
 
     @Test (enabled = false)
     public void initiatorLeavesCall() {
-        patient.login().toAppAs(false, "1111");
-        carer.login().toAppAs(true,"1234571");
-        carer.calls().dialTo("Andrew Leigh");
+        patient.login().toAppAs(false, patientPhone);
+        carer.login().toAppAs(true,carerPhone);
+        carer.calls().dialTo(andrewLeigh);
         patient.calls().accept();
         carer.calls().leave();
 
@@ -97,9 +100,9 @@ public class CallsTests extends TestBase {
 
     @Test (enabled = false)
     public void recieverDeclinesCall() {
-        patient.login().toAppAs(false, "1111");
-        carer.login().toAppAs(true,"1234571");
-        carer.calls().dialTo("Andrew Leigh");
+        patient.login().toAppAs(false, patientPhone);
+        carer.login().toAppAs(true,carerPhone);
+        carer.calls().dialTo(andrewLeigh);
         patient.calls().decline();
 
         Assert.assertTrue(patient.helper().isElementPresent(startCallButton));
@@ -109,9 +112,9 @@ public class CallsTests extends TestBase {
 
     @Test (enabled = false)
     public void recieverTimeoutesCall() {
-        patient.login().toAppAs(false, "1111");
-        carer.login().toAppAs(true,"1234571");
-        carer.calls().dialTo("Andrew Leigh");
+        patient.login().toAppAs(false, patientPhone);
+        carer.login().toAppAs(true,carerPhone);
+        carer.calls().dialTo(andrewLeigh);
         patient.calls().timeOut();
 
         Assert.assertTrue(carer.helper().isElementPresent(startCallButton));
@@ -121,9 +124,9 @@ public class CallsTests extends TestBase {
 
     @Test (enabled = false)
     public void recieverLeavesCall() {
-        patient.login().toAppAs(false, "1111");
-        carer.login().toAppAs(true,"1234571");
-        carer.calls().dialTo("Andrew Leigh");
+        patient.login().toAppAs(false, patientPhone);
+        carer.login().toAppAs(true,carerPhone);
+        carer.calls().dialTo(andrewLeigh);
         patient.calls().accept();
         patient.calls().leave();
 
@@ -134,9 +137,9 @@ public class CallsTests extends TestBase {
 
     @Test (enabled = false)
     public void addThirdPartyButton() {
-        patient.login().toAppAs(false, "1111");
-        carer.login().toAppAs(true,"1234571");
-        carer.calls().dialTo("Andrew Leigh");
+        patient.login().toAppAs(false, patientPhone);
+        carer.login().toAppAs(true,carerPhone);
+        carer.calls().dialTo(andrewLeigh);
         patient.calls().accept();
         carer.calls().tapInviteButton();
 
