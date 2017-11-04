@@ -15,4 +15,5 @@ dependencies {
     compile 'org.hibernate:hibernate-core:5.2.10.Final'
     compile 'ru.lanwen.verbalregex:java-verbal-expressions:1.4'
     compile 'commons-net:commons-net:3.6'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
 }
