@@ -19,7 +19,7 @@ public class CallsTests extends TestBase {
     private String carerPhone = "1234571";
 
     @Test (enabled = false)
-    public void recieverAcceptsCall() {
+    public void receiverAcceptsCall() {
         patient.login().toAppAs(false, patientPhone);
         carer.login().toAppAs(true,carerPhone);
         carer.calls().dialTo(andrewLeigh);
@@ -99,7 +99,7 @@ public class CallsTests extends TestBase {
     }
 
     @Test (enabled = false)
-    public void recieverDeclinesCall() {
+    public void receiverDeclinesCall() {
         patient.login().toAppAs(false, patientPhone);
         carer.login().toAppAs(true,carerPhone);
         carer.calls().dialTo(andrewLeigh);
@@ -111,7 +111,7 @@ public class CallsTests extends TestBase {
     }
 
     @Test (enabled = false)
-    public void recieverTimeoutesCall() {
+    public void receiverTimeOutCall() {
         patient.login().toAppAs(false, patientPhone);
         carer.login().toAppAs(true,carerPhone);
         carer.calls().dialTo(andrewLeigh);
@@ -123,7 +123,7 @@ public class CallsTests extends TestBase {
     }
 
     @Test (enabled = false)
-    public void recieverLeavesCall() {
+    public void receiverLeavesCall() {
         patient.login().toAppAs(false, patientPhone);
         carer.login().toAppAs(true,carerPhone);
         carer.calls().dialTo(andrewLeigh);

@@ -35,24 +35,18 @@ public class CallsHelper extends BaseHelper {
             }
             androidDriver.findElement(LOCATORS.startCallButton).click();
         }
-        setImplicitlyWait(0);
         waitForElementPresence(LOCATORS.cameraSwitchButton, Wait.FOR_SESSION_CONNECTION.getValue());
-        setImplicitlyWait(10);
     }
 
     public void accept() {
-        setImplicitlyWait(0);
         waitForElementPresence(LOCATORS.acceptCallButton, Wait.FOR_INCOMING_CALL.getValue());
         androidDriver.findElement(LOCATORS.acceptCallButton).click();
         waitForElementPresence(LOCATORS.onCallTopLeftVideoFrame, Wait.FOR_CALL_SET_UP.getValue());
-        setImplicitlyWait(10);
     }
 
     public void decline() {
-        setImplicitlyWait(0);
         waitForElementPresence(LOCATORS.acceptCallButton, Wait.FOR_INCOMING_CALL.getValue());
         androidDriver.findElement(LOCATORS.declineCallButton).click();
-        setImplicitlyWait(10);
     }
 
     public void leave() {
