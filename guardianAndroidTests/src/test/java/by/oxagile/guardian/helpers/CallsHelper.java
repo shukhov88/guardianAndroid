@@ -8,12 +8,16 @@ import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
 public class CallsHelper extends BaseHelper {
 
     private static final CallsHelperLocators LOCATORS = new CallsHelperLocators();
+
+    Logger logger = LoggerFactory.getLogger(CallsHelper.class);
 
     public CallsHelper(CarerManager carerManager) {
         super(carerManager);
@@ -26,6 +30,7 @@ public class CallsHelper extends BaseHelper {
     public void dialTo(String contact) {
         if (contact.equals("ASSIST")) {
             androidDriver.findElement(LOCATORS.assistCallButton).click();
+            logger.info("Patient dial to ASSIST");
         } else {
             List<MobileElement> contactsList = androidDriver.findElements(LOCATORS.contactCell);
             for (int i = 0; i < contactsList.size(); i++) {
@@ -34,6 +39,7 @@ public class CallsHelper extends BaseHelper {
                 }
             }
             androidDriver.findElement(LOCATORS.startCallButton).click();
+            logger.info("User dial to " + contact);
         }
         waitForElementPresence(LOCATORS.cameraSwitchButton, Wait.FOR_SESSION_CONNECTION.getValue());
     }
