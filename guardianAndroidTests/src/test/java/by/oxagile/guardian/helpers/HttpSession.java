@@ -11,12 +11,16 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.client.LaxRedirectStrategy;
 import org.apache.http.util.EntityUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
 public class HttpSession {
     private CloseableHttpClient httpclient;
     private AssistManager assist;
+
+    Logger logger = LoggerFactory.getLogger(HttpSession.class);
 
     public HttpSession(AssistManager assist) {
         this.assist = assist;
@@ -48,6 +52,7 @@ public class HttpSession {
     }
 
     public String joinCall(String callID) throws IOException {
+        logger.info("Fetching TOKEN for ASSIST to join call ID: " + callID);
         String json = Request.Get(assist.getProperty("environment.url") + "/v1/calls/" + callID + "/join")
                 .addHeader("Authorization", assist.getProperty("Assist.Token"))
                 .addHeader("Content-Type", "application/json")
@@ -56,7 +61,9 @@ public class HttpSession {
                 .asString();
 
         JsonElement parsed = new JsonParser().parse(json);
-        return parsed.getAsJsonObject().get("token").getAsString();
+        String token = parsed.getAsJsonObject().get("token").getAsString();
+        logger.info("TOKEN for ASSIST fetched: " + token);
+        return token;
     }
 
 }
