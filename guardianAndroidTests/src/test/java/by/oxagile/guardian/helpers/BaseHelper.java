@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,15 +22,18 @@ public class BaseHelper {
     protected AndroidDriver androidDriver;
     protected AssistManager assistManager;
     protected WebDriver webDriver;
+    Logger logger;
 
     public BaseHelper(CarerManager carerManager) {
         this.carer = carerManager;
         this.androidDriver = carer.getCarerDriver();
+        logger = LoggerFactory.getLogger(CarerManager.class);
     }
 
     public BaseHelper(PatientManager patientManager) {
         this.patient = patientManager;
         this.androidDriver = patient.getPatientDriver();
+        logger = LoggerFactory.getLogger(PatientManager.class);
     }
 
     public BaseHelper(AssistManager assist) {

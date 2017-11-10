@@ -30,8 +30,8 @@ public class AssistHelper extends BaseHelper {
         } else {
             webDriver.get(assistManager.getProperty("web.TokBoxUrl"));
         }
-        setWebDriverWait(10);
         logger.info("Logged into TokBox playground");
+        setWebDriverWait(10);
     }
 
     public void playgroundConnect(String token) {

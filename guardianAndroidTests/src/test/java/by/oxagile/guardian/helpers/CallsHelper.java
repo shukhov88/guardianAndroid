@@ -13,11 +13,11 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-public class CallsHelper extends BaseHelper {
+public class CallsHelper extends BaseHelper implements Thread.UncaughtExceptionHandler {
 
     private static final CallsHelperLocators LOCATORS = new CallsHelperLocators();
 
-    Logger logger = LoggerFactory.getLogger(CallsHelper.class);
+    //Logger logger = LoggerFactory.getLogger(CallsHelper.class);
 
     public CallsHelper(CarerManager carerManager) {
         super(carerManager);
@@ -44,42 +44,45 @@ public class CallsHelper extends BaseHelper {
             androidDriver.findElement(LOCATORS.startCallButton).click();
             logger.info("User dialed to " + contact);
             //trying to identify who is calling Carer or Patient:
-            System.out.println(super.getClass());
+            System.out.println();
         }
         waitForElementPresence(LOCATORS.cameraSwitchButton, Wait.FOR_SESSION_CONNECTION.getValue());
     }
 
     public void accept() {
         waitForElementPresence(LOCATORS.acceptCallButton, Wait.FOR_INCOMING_CALL.getValue());
-        logger.info("User received incoming call");
+        String callerName = getCallerName();
+        logger.info("User received incoming call from: " + callerName);
         androidDriver.findElement(LOCATORS.acceptCallButton).click();
-        logger.info("User accepted incoming call");
+        logger.info("User accepted incoming call from: " + callerName);
         waitForElementPresence(LOCATORS.onCallTopLeftVideoFrame, Wait.FOR_CALL_SET_UP.getValue());
-        logger.info("Call has set up");
+        logger.info("Call with " + callerName + " has set up");
     }
 
     public void decline() {
         waitForElementPresence(LOCATORS.acceptCallButton, Wait.FOR_INCOMING_CALL.getValue());
-        logger.info("User received incoming call");
+        String callerName = getCallerName();
+        logger.info("User received incoming call from: " + callerName);
         androidDriver.findElement(LOCATORS.declineCallButton).click();
-        logger.info("User declined incoming call");
+        logger.info("User declined incoming call from: " + callerName);
     }
 
     public void leave() {
+        String callerName = getOnCallName();
         androidDriver.findElement(LOCATORS.endCallButton).click();
-        logger.info("User left the call");
+        logger.info("User left the call with " + callerName);
     }
 
     // Next 2 methods may be used to log call initiator name:
     public String getCallerName() {
         String caller = androidDriver.findElement(LOCATORS.callerName).getText();
-        logger.info("Caller name detected (from incoming call screen)");
+        logger.info("Caller name detected (from incoming call screen): " + caller);
         return caller;
     }
 
     public String getOnCallName() {
         String caller = androidDriver.findElement(LOCATORS.onCallName).getText();
-        logger.info("Caller name detected (from on call screen)");
+        logger.info("Caller name detected (from on call screen): " + caller);
         return caller;
     }
 
@@ -143,4 +146,10 @@ public class CallsHelper extends BaseHelper {
         waitForElementPresence(LOCATORS.startCallButton, Wait.FOR_CALL_TO_TIMEOUT.getValue());
         logger.info("User time outed incoming call");
     }
+
+    @Override
+    public void uncaughtException(Thread t, Throwable e) {
+        logger.error("Uncaught exception", e);
+    }
+    Thread.
 }

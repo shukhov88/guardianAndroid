@@ -18,7 +18,7 @@ public class CallsTests extends TestBase {
     private String patientPhone = "1111";
     private String carerPhone = "1234571";
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void receiverAcceptsCall() {
         patient.login().toAppAs(false, patientPhone);
         carer.login().toAppAs(true,carerPhone);
@@ -30,7 +30,7 @@ public class CallsTests extends TestBase {
         Assert.assertEquals(assist.mongoDB().getLastCallStatus(), "ONGOING");
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void patientCarerVideoStreamsLocation() {
         patient.login().toAppAs(false, patientPhone);
         carer.login().toAppAs(true,carerPhone);
