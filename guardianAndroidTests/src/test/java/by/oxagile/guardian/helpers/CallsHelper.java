@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-public class CallsHelper extends BaseHelper implements Thread.UncaughtExceptionHandler {
+public class CallsHelper extends BaseHelper {
 
     private static final CallsHelperLocators LOCATORS = new CallsHelperLocators();
 
@@ -146,10 +146,4 @@ public class CallsHelper extends BaseHelper implements Thread.UncaughtExceptionH
         waitForElementPresence(LOCATORS.startCallButton, Wait.FOR_CALL_TO_TIMEOUT.getValue());
         logger.info("User time outed incoming call");
     }
-
-    @Override
-    public void uncaughtException(Thread t, Throwable e) {
-        logger.error("Uncaught exception", e);
-    }
-    Thread.
 }
