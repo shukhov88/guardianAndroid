@@ -3,6 +3,7 @@ package by.oxagile.guardian.managers;
 import by.oxagile.guardian.helpers.CallsHelper;
 import by.oxagile.guardian.helpers.LoginHelper;
 import by.oxagile.guardian.helpers.PatientHelper;
+import by.oxagile.guardian.models.Device;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
@@ -20,28 +21,18 @@ public class PatientManager {
     private PatientHelper patientHelper;
     private LoginHelper loginHelper;
     private CallsHelper callsHelper;
+    private static final Device DEVICE = new ParseDevice().getDevice("mine");
 
     public AndroidDriver getPatientDriver() {
         if (patientWD == null) {
             File app = new File ("c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk");
 
-//            //SGS7 (work - #101313):
-//            DesiredCapabilities capabilities = new DesiredCapabilities();
-//            capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-//            capabilities.setCapability("deviceName", "ad0c1603a9064c6b0b");
-//            capabilities.setCapability("platformVersion", "7.0");
-//            capabilities.setCapability("platformName", "Android");
-//            capabilities.setCapability("app", app.getAbsolutePath());
-//            capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
-//            capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
-
-            //SGS4 (my personal):
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
             capabilities.setCapability("newCommandTimeout", "200");
-            capabilities.setCapability("deviceName", "4d00e7d3b654a039");
-            capabilities.setCapability("platformVersion", "5.0.1");
-            capabilities.setCapability("platformName", "Android");
+            capabilities.setCapability("deviceName", DEVICE.getID());
+            capabilities.setCapability("platformVersion", DEVICE.getPlatformVersion());
+            capabilities.setCapability("platformName", DEVICE.getPlatform());
             capabilities.setCapability("app", app.getAbsolutePath());
             capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
             capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
