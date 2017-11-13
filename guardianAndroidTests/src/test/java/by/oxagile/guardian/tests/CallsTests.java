@@ -1,10 +1,14 @@
 package by.oxagile.guardian.tests;
 
+import by.oxagile.guardian.managers.ParseDevice;
+import by.oxagile.guardian.models.Device;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 
 
 public class CallsTests extends TestBase {
@@ -18,7 +22,8 @@ public class CallsTests extends TestBase {
     private String patientPhone = "1111";
     private String carerPhone = "1234571";
 
-    @Test (enabled = false)
+    
+    @Test (enabled = true)
     public void receiverAcceptsCall() {
         patient.login().toAppAs(false, patientPhone);
         carer.login().toAppAs(true,carerPhone);
@@ -30,7 +35,7 @@ public class CallsTests extends TestBase {
         Assert.assertEquals(assist.mongoDB().getLastCallStatus(), "ONGOING");
     }
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void patientCarerVideoStreamsLocation() {
         patient.login().toAppAs(false, patientPhone);
         carer.login().toAppAs(true,carerPhone);

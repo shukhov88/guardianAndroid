@@ -3,6 +3,7 @@ package by.oxagile.guardian.managers;
 import by.oxagile.guardian.helpers.CallsHelper;
 import by.oxagile.guardian.helpers.CarerHelper;
 import by.oxagile.guardian.helpers.LoginHelper;
+import by.oxagile.guardian.models.Device;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
@@ -20,18 +21,18 @@ public class CarerManager {
     private CarerHelper carerHelper;
     private LoginHelper loginHelper;
     private CallsHelper callsHelper;
+    private static final Device DEVICE = new ParseDevice().getDevice("101314");
 
     public AndroidDriver getCarerDriver() {
         if (carerWD == null) {
             File app = new File ("c:\\Users\\shukhovvg\\guardianAssist\\guardianAndroidTests\\src\\test\\resources\\guardianPatient-android.apk");
 
-            //SGS7 (work - #101314):
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
             capabilities.setCapability("newCommandTimeout", "200");
-            capabilities.setCapability("deviceName", "ce12160cbab93cae0c");
-            capabilities.setCapability("platformVersion", "6.0.1");
-            capabilities.setCapability("platformName", "Android");
+            capabilities.setCapability("deviceName", DEVICE.getID());
+            capabilities.setCapability("platformVersion", DEVICE.getPlatformVersion());
+            capabilities.setCapability("platformName", DEVICE.getPlatform());
             capabilities.setCapability("app", app.getAbsolutePath());
             capabilities.setCapability("appPackage", "com.oxagile.GuardianAssist.PatientDev");
             capabilities.setCapability("appActivity", "com.guardianassist.patient.login.LoginActivity");
