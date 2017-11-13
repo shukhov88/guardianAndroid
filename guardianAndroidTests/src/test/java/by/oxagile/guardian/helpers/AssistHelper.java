@@ -2,6 +2,9 @@ package by.oxagile.guardian.helpers;
 
 
 import by.oxagile.guardian.managers.AssistManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
@@ -13,7 +16,10 @@ public class AssistHelper extends BaseHelper {
 
     public AssistHelper(AssistManager assist) {
         super(assist);
+        logger.info("AssistHelper initiated");
     }
+
+    Logger logger = LoggerFactory.getLogger(AssistHelper.class);
 
     public void playgroundLogin() {
         setWebDriverWait(2);
@@ -24,6 +30,7 @@ public class AssistHelper extends BaseHelper {
         } else {
             webDriver.get(assistManager.getProperty("web.TokBoxUrl"));
         }
+        logger.info("Logged into TokBox playground");
         setWebDriverWait(10);
     }
 
@@ -35,6 +42,7 @@ public class AssistHelper extends BaseHelper {
         click(LOCATORS.connectSession);
         click(LOCATORS.publishStream);
         click(LOCATORS.submitStreamPublish);
+        logger.info("ASSIST connected to call");
     }
 
     public void allowPermission() {
@@ -44,8 +52,10 @@ public class AssistHelper extends BaseHelper {
             robot.keyRelease(KeyEvent.VK_TAB);
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyRelease(KeyEvent.VK_ENTER);
+            logger.info("Chrome permissions to stream video and audio successfully granted");
 
         } catch (AWTException e) {
+            logger.info("Failed to grant chrome permissions to stream video and audio");
             e.printStackTrace();
         }
     }
@@ -58,5 +68,6 @@ public class AssistHelper extends BaseHelper {
 
     public void setWebDriverWait(long seconds) {
         webDriver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+        logger.info("Webdriver implicitly wait has set to " + seconds);
     }
 }

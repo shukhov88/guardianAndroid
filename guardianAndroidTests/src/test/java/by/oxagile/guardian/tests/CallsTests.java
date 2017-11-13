@@ -30,7 +30,7 @@ public class CallsTests extends TestBase {
         Assert.assertEquals(assist.mongoDB().getLastCallStatus(), "ONGOING");
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void patientCarerVideoStreamsLocation() {
         patient.login().toAppAs(false, patientPhone);
         carer.login().toAppAs(true,carerPhone);

@@ -13,6 +13,8 @@ import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.types.ObjectId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,6 +27,8 @@ public class MongoHelper {
     String database = "guardian-assist";
     char[] password = pass.toCharArray();
 
+    Logger logger = LoggerFactory.getLogger(MongoHelper.class);
+
     public MongoHelper() {
 
         MongoCredential creds = MongoCredential.createCredential(login, database, password);
@@ -32,16 +36,19 @@ public class MongoHelper {
     }
 
     public String getCallStatus(String callId) {
+        logger.info("Fetching status of call: " + callId);
         MongoDatabase db = connection.getDatabase("guardian-assist");
         MongoCollection<org.bson.Document> calls = db.getCollection("calls");
         BasicDBObject query = new BasicDBObject("_id",new ObjectId(callId));
         FindIterable<Document> call = calls.find(query);
-        return call.iterator().next().get("status").toString();
-
+        String status = call.iterator().next().get("status").toString();
+        logger.info("Status of call " + callId + " fetched: " + status);
+        return status;
     }
 
 
     public void waitForCallInitiated(String callId) {
+        logger.info("Waiting for call status to become INITIATED");
         while (getCallStatus(callId).equals("REQUESTED")) {
             try {
                 Thread.sleep(1000);
@@ -49,10 +56,11 @@ public class MongoHelper {
                 e.printStackTrace();
             }
         }
+        logger.info("Call status has became INITIATED");
     }
 
     public String getLastCallID() {
-
+        logger.info("Fetching call ID...");
         MongoDatabase db = connection.getDatabase("guardian-assist");
         MongoCollection<org.bson.Document> calls = db.getCollection("calls");
         MongoCursor<org.bson.Document> cursor = calls.find().iterator();
@@ -67,12 +75,14 @@ public class MongoHelper {
         }
         int lastCallID = callIDs.size() - 1;
         String callId = callIDs.get(lastCallID);
+        logger.info("Call ID fetched: " + callId);
         waitForCallInitiated(callId);
         return callId;
 
     }
 
     public String getLastCallStatus() {
+        logger.info("Fetching call status...");
         MongoDatabase db = connection.getDatabase("guardian-assist");
         MongoCollection<org.bson.Document> calls = db.getCollection("calls");
         MongoCursor<org.bson.Document> cursor = calls.find().iterator();
@@ -88,6 +98,8 @@ public class MongoHelper {
         int lastObject = callObjects.size() - 1;
 
         JsonElement parsed = new JsonParser().parse(callObjects.get(lastObject).toJson());
-        return parsed.getAsJsonObject().get("status").getAsString();
+        String status = parsed.getAsJsonObject().get("status").getAsString();
+        logger.info("Call status fetched: " + status);
+        return status;
     }
 }
