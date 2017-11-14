@@ -1,14 +1,9 @@
 package by.oxagile.guardian.tests;
 
-import by.oxagile.guardian.managers.ParseDevice;
-import by.oxagile.guardian.models.Device;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.List;
 
 
 public class CallsTests extends TestBase {
