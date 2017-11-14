@@ -22,7 +22,7 @@ public class CallsTests extends TestBase {
     private String patientPhone = "1111";
     private String carerPhone = "1234571";
 
-    
+
     @Test (enabled = true)
     public void receiverAcceptsCall() {
         patient.login().toAppAs(false, patientPhone);

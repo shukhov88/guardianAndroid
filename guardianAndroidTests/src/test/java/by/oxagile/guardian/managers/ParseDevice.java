@@ -6,10 +6,10 @@ import com.google.common.reflect.TypeToken;
 import com.google.gson.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.lang.reflect.Type;
 import java.util.List;
+
 
 
 public class ParseDevice {
@@ -20,8 +20,8 @@ public class ParseDevice {
     public Device getDevice(String invent) {
         JsonParser parser = new JsonParser();
         Device device = null;
+        Type listType = new TypeToken<List<Device>>(){}.getType();
         try {
-            Type listType = new TypeToken<List<Device>>(){}.getType();
             Object obj = parser.parse(new FileReader(path));
             JsonObject jsonObj = (JsonObject) obj;
             JsonArray devices = jsonObj.get("device").getAsJsonArray();
@@ -29,9 +29,11 @@ public class ParseDevice {
 
             for (int i = 0; i < list.size(); i++) {
                 Device temp = list.get(i);
-                if (temp.getInvent().equals(invent)) {
-                    device = temp;
-                    break;
+                if (temp.getInvent() != null) {
+                    if (temp.getInvent().equals(invent)) {
+                        device = temp;
+                        break;
+                    }
                 }
             }
         } catch (FileNotFoundException e) {
