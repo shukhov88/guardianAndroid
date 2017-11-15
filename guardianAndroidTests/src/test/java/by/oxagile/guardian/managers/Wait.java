@@ -5,7 +5,8 @@ public enum Wait {
     FOR_SESSION_CONNECTION(5),
     FOR_CALL_SET_UP(7),
     FOR_CALL_TO_TIMEOUT(70),
-    FOR_UBER_PAGE(10);
+    FOR_UBER_PAGE(10),
+    FOR_ELEMENT_PRESENT(10);
 
     private final int value;
 

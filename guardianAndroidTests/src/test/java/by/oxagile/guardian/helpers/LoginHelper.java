@@ -3,11 +3,7 @@ package by.oxagile.guardian.helpers;
 import by.oxagile.guardian.managers.CarerManager;
 import by.oxagile.guardian.managers.PatientManager;
 import by.oxagile.guardian.managers.Wait;
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
-import org.openqa.selenium.By;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class LoginHelper extends BaseHelper {
 
@@ -22,20 +18,20 @@ public class LoginHelper extends BaseHelper {
     }
 
     public void acceptPermissions() {
-        androidDriver.findElement(LOCATORS.proceedToPermissions).click();
+        tap(LOCATORS.proceedToPermissions);
         for (int i = 0; i < LOCATORS.permissionsQTY; i++) {
-            androidDriver.findElement(LOCATORS.allowPermission).click();
+            tap(LOCATORS.allowPermission);
         }
     }
 
     public void as(String mobilePhone) {
-        ((AndroidElement) androidDriver.findElement(LOCATORS.loginFirstNameField)).setValue("1");
+        type(LOCATORS.loginFirstNameField, "1");
         logger.info("User " + mobilePhone + " entered first name at login screen");
-        ((AndroidElement) androidDriver.findElement(LOCATORS.loginLastNameField)).setValue("1");
+        type(LOCATORS.loginLastNameField, "1");
         logger.info("User " + mobilePhone + " entered last name at login screen");
-        ((AndroidElement) androidDriver.findElement(LOCATORS.loginPhoneField)).setValue(mobilePhone);
+        type(LOCATORS.loginPhoneField, mobilePhone);
         logger.info("User " + mobilePhone + " entered mobile phone at login screen");
-        androidDriver.findElement(LOCATORS.loginNextButton).click();
+        tap(LOCATORS.loginNextButton);
         logger.info("User " + mobilePhone + " tapped 'next' button at login screen");
     }
 

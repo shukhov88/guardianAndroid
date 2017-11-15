@@ -12,12 +12,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class CallsHelper extends BaseHelper {
 
     private static final CallsHelperLocators LOCATORS = new CallsHelperLocators();
-
-    //Logger logger = LoggerFactory.getLogger(CallsHelper.class);
 
     public CallsHelper(CarerManager carerManager) {
         super(carerManager);
@@ -31,20 +30,30 @@ public class CallsHelper extends BaseHelper {
 
     public void dialTo(String contact) {
         if (contact.equals("ASSIST")) {
-            androidDriver.findElement(LOCATORS.assistCallButton).click();
+            tap(LOCATORS.assistCallButton);
             logger.info("Patient dialed to ASSIST");
         } else {
             List<MobileElement> contactsList = androidDriver.findElements(LOCATORS.contactCell);
-            for (int i = 0; i < contactsList.size(); i++) {
-                if (contactsList.get(i).getText().equals(contact)) {
-                    contactsList.get(i).click();
-                    logger.info(contact + " is found and selected in contacts list of user");
+            if (contactsList.size() == 0) {
+                logger.error("User doesn't have contacts");
+                throw new NoSuchElementException("User doesn't have contacts");
+            } else {
+                boolean isContactPresent = false;
+                for (int i = 0; i < contactsList.size(); i++) {
+                    if (contactsList.get(i).getText().equals(contact)) {
+                        isContactPresent = true;
+                        contactsList.get(i).click();
+                        logger.info(contact + " is found and selected in contacts list of user");
+                        break;
+                    }
+                }
+                if (!isContactPresent) {
+                    logger.error("User doesn't have contact with name = " + contact);
+                    throw new NoSuchElementException("User doesn't have contact with name = " + contact);
                 }
             }
-            androidDriver.findElement(LOCATORS.startCallButton).click();
-            logger.info("User dialed to " + contact);
-            //trying to identify who is calling Carer or Patient:
-            System.out.println();
+            tap(LOCATORS.startCallButton);
+            logger.info("User started dialing to " + contact);
         }
         waitForElementPresence(LOCATORS.cameraSwitchButton, Wait.FOR_SESSION_CONNECTION.getValue());
     }
@@ -53,7 +62,7 @@ public class CallsHelper extends BaseHelper {
         waitForElementPresence(LOCATORS.acceptCallButton, Wait.FOR_INCOMING_CALL.getValue());
         String callerName = getCallerName();
         logger.info("User received incoming call from: " + callerName);
-        androidDriver.findElement(LOCATORS.acceptCallButton).click();
+        tap(LOCATORS.acceptCallButton);
         logger.info("User accepted incoming call from: " + callerName);
         waitForElementPresence(LOCATORS.onCallTopLeftVideoFrame, Wait.FOR_CALL_SET_UP.getValue());
         logger.info("Call with " + callerName + " has set up");
@@ -63,58 +72,69 @@ public class CallsHelper extends BaseHelper {
         waitForElementPresence(LOCATORS.acceptCallButton, Wait.FOR_INCOMING_CALL.getValue());
         String callerName = getCallerName();
         logger.info("User received incoming call from: " + callerName);
-        androidDriver.findElement(LOCATORS.declineCallButton).click();
+        tap(LOCATORS.declineCallButton);
         logger.info("User declined incoming call from: " + callerName);
     }
 
     public void leave() {
         String callerName = getOnCallName();
-        androidDriver.findElement(LOCATORS.endCallButton).click();
+        tap(LOCATORS.endCallButton);
         logger.info("User left the call with " + callerName);
     }
 
     // Next 2 methods may be used to log call initiator name:
     public String getCallerName() {
-        String caller = androidDriver.findElement(LOCATORS.callerName).getText();
+        String caller = getText(LOCATORS.callerName);
         logger.info("Caller name detected (from incoming call screen): " + caller);
         return caller;
     }
 
     public String getOnCallName() {
-        String caller = androidDriver.findElement(LOCATORS.onCallName).getText();
+        String caller = getText(LOCATORS.onCallName);
         logger.info("Caller name detected (from on call screen): " + caller);
         return caller;
     }
 
     public void tapInviteButton() {
-        androidDriver.findElement(LOCATORS.inviteThirdPartyButton).click();
+        tap(LOCATORS.inviteThirdPartyButton);
         logger.info("User tapped invite 3rd party button");
     }
 
     public void inviteThirdParty(String contact) {
 
-        androidDriver.findElement(LOCATORS.inviteThirdPartyButton).click();
+        tap(LOCATORS.inviteThirdPartyButton);
         logger.info("User tapped invite 3rd party button");
         List<MobileElement> contactsList = androidDriver.findElements(LOCATORS.contactCell);
-        for (int i = 0; i < contactsList.size(); i++) {
-            if (contactsList.get(i).getText().equals(contact)) {
-                contactsList.get(i).click();
-                logger.info(contact + " is found and selected in 'add 3rd party' contacts list of user");
+        if (contactsList.size() == 0) {
+            logger.error("User doesn't have contacts to add as 3rd party");
+        } else {
+            boolean isContactPresent = false;
+            for (int i = 0; i < contactsList.size(); i++) {
+                if (contactsList.get(i).getText().equals(contact)) {
+                    isContactPresent = true;
+                    contactsList.get(i).click();
+                    logger.info(contact + " is found and selected in 'add 3rd party' contacts list of user");
+                    break;
+                }
+            }
+            if (!isContactPresent) {
+                logger.error("User doesn't have contact with name = " + contact + "at add 3rd party contacts list");
+                throw new NoSuchElementException("User doesn't have contact with name = " + contact + "at add 3rd party contacts list");
             }
         }
-        androidDriver.findElement(LOCATORS.inviteToCallButton).click();
+        tap(LOCATORS.inviteToCallButton);
         logger.info(contact + " is invited to call as 3rd party by User");
     }
 
     public void stopInviting() {
-        androidDriver.findElement(LOCATORS.stopInviting).click();
+        tap(LOCATORS.stopInviting);
         logger.info("User stopped inviting 3rd party to call");
     }
 
     public String getCentralVideoStreamID() {
         waitForElementPresence(LOCATORS.onCallCentralVideoFrame, 5);
         logger.info("central video frame detected");
-        String id = androidDriver.findElement(LOCATORS.onCallCentralVideoFrame).getAttribute("contentDescription");
+        String id = getContentDescriptionValue(LOCATORS.onCallCentralVideoFrame);
         logger.info("ID of user that streaming to central video frame extracted");
         return id;
     }
@@ -122,7 +142,7 @@ public class CallsHelper extends BaseHelper {
     public String getTopLeftVideoStreamID() {
         waitForElementPresence(LOCATORS.onCallTopLeftVideoFrame, 5);
         logger.info("top left video frame detected");
-        String id = androidDriver.findElement(LOCATORS.onCallTopLeftVideoFrame).getAttribute("contentDescription");
+        String id = getContentDescriptionValue(LOCATORS.onCallTopLeftVideoFrame);
         logger.info("ID of user that streaming to top left video frame extracted");
         return id;
     }
@@ -130,13 +150,13 @@ public class CallsHelper extends BaseHelper {
     public String getTopRightVideoStreamID() {
         waitForElementPresence(LOCATORS.onCallTopRightVideoFrame, 5);
         logger.info("top right video frame detected");
-        String id = androidDriver.findElement(LOCATORS.onCallTopRightVideoFrame).getAttribute("contentDescription");
+        String id = getContentDescriptionValue(LOCATORS.onCallTopRightVideoFrame);
         logger.info("ID of user that streaming to top right video frame extracted");
         return id;
     }
 
     public void stopDialing() {
-        androidDriver.findElement(LOCATORS.stopDialingButton).click();
+        tap(LOCATORS.stopDialingButton);
         logger.info("User stopped dialing");
     }
 
