@@ -24,8 +24,8 @@ public class AssistHelper extends BaseHelper {
     public void playgroundLogin() {
         setWebDriverWait(2);
         if (webDriver.findElements(LOCATORS.tokBoxLogin).size()==1) {
-            type(LOCATORS.tokBoxLogin, assistManager.getProperty("TB.login"));
-            type(LOCATORS.tokBoxPass, assistManager.getProperty("TB.pass"));
+            input(LOCATORS.tokBoxLogin, assistManager.getProperty("TB.login"));
+            input(LOCATORS.tokBoxPass, assistManager.getProperty("TB.pass"));
             click(LOCATORS.tokBoxLoginButton);
         } else {
             webDriver.get(assistManager.getProperty("web.TokBoxUrl"));
@@ -37,7 +37,7 @@ public class AssistHelper extends BaseHelper {
     public void playgroundConnect(String token) {
         click(LOCATORS.joinExistingSession);
         click(LOCATORS.useExistingToken);
-        type(LOCATORS.tokenField, token);
+        input(LOCATORS.tokenField, token);
         click(LOCATORS.subnitJoinSession);
         click(LOCATORS.connectSession);
         click(LOCATORS.publishStream);

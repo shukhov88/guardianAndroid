@@ -3,11 +3,10 @@ package by.oxagile.guardian.helpers;
 import by.oxagile.guardian.managers.AssistManager;
 import by.oxagile.guardian.managers.CarerManager;
 import by.oxagile.guardian.managers.PatientManager;
+import by.oxagile.guardian.managers.Wait;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import io.appium.java_client.android.AndroidElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -22,6 +21,7 @@ public class BaseHelper {
     protected AndroidDriver androidDriver;
     protected AssistManager assistManager;
     protected WebDriver webDriver;
+    Logger debugLogger = LoggerFactory.getLogger(BaseHelper.class);
     Logger logger;
 
     public BaseHelper(CarerManager carerManager) {
@@ -42,21 +42,32 @@ public class BaseHelper {
     }
 
     protected void click(By locator) {
-        WebDriverWait wait = new WebDriverWait(webDriver, 10);
-        //WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
-        WebElement element = webDriver.findElement(locator);
-        wait.until(ExpectedConditions.visibilityOf(element));
-        ((JavascriptExecutor)webDriver).executeScript("arguments[0].click();", element);
+        try {
+            WebDriverWait wait = new WebDriverWait(webDriver, 10);
+            //WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+            WebElement element = webDriver.findElement(locator);
+            wait.until(ExpectedConditions.visibilityOf(element));
+            ((JavascriptExecutor)webDriver).executeScript("arguments[0].click();", element);
+        } catch (NoSuchElementException e) {
+            debugLogger.error("NoSuchElementException. Locator: " + locator, e);
+            throw e;
+        }
+
     }
 
-    protected void type(By locator, String text) {
-        click(locator);
-        if (text != null) {
-            String existingTest = webDriver.findElement(locator).getAttribute("value");
-            if (!text.equals(existingTest)) {
-                webDriver.findElement(locator).clear();
-                webDriver.findElement(locator).sendKeys(text);
+    protected void input(By locator, String text) {
+        try {
+            click(locator);
+            if (text != null) {
+                String existingTest = webDriver.findElement(locator).getAttribute("value");
+                if (!text.equals(existingTest)) {
+                    webDriver.findElement(locator).clear();
+                    webDriver.findElement(locator).sendKeys(text);
+                }
             }
+        } catch (NoSuchElementException e) {
+            debugLogger.error("NoSuchElementException. Locator: " + locator, e);
+            throw e;
         }
     }
 
@@ -71,12 +82,24 @@ public class BaseHelper {
     }*/
 
     public String getText(By locator) {
-        return androidDriver.findElement(locator).getText();
+        String text;
+        try {
+            text = androidDriver.findElement(locator).getText();
+        } catch (NoSuchElementException e) {
+            debugLogger.error("NoSuchElementException. Locator: " + locator, e);
+            throw e;
+        }
+        return text;
     }
 
     public void waitForElementPresence(By locator, int seconds) {
-        WebDriverWait wait = new WebDriverWait(androidDriver, seconds);
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        try {
+            WebDriverWait wait = new WebDriverWait(androidDriver, seconds);
+            wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        } catch (NoSuchElementException e) {
+            debugLogger.error("NoSuchElementException. Locator: " + locator, e);
+            throw e;
+        }
     }
 
     public void setImplicitlyWait(int seconds) {
@@ -84,7 +107,36 @@ public class BaseHelper {
     }
 
     public boolean isElementPresent(By locator) {
-        setImplicitlyWait(10);
+        setImplicitlyWait(Wait.FOR_ELEMENT_PRESENT.getValue());
         return androidDriver.findElements(locator).size() == 1;
+    }
+
+    protected void tap(By locator) {
+        try {
+            androidDriver.findElement(locator).click();
+        } catch (NoSuchElementException e) {
+            debugLogger.error("NoSuchElementException. Locator: " + locator, e);
+            throw e;
+        }
+    }
+
+    protected void type(By locator, String text) {
+        try {
+            ((AndroidElement) androidDriver.findElement(locator)).setValue(text);
+        } catch (NoSuchElementException e) {
+            debugLogger.error("NoSuchElementException. Locator: " + locator, e);
+            throw e;
+        }
+    }
+
+    protected String getContentDescriptionValue(By locator) {
+        String contentDescription = "";
+        try {
+            contentDescription = androidDriver.findElement(locator).getAttribute("contentDescription");
+        } catch (NoSuchElementException e) {
+            debugLogger.error("NoSuchElementException. Locator: " + locator, e);
+            throw e;
+        }
+        return contentDescription;
     }
 }
