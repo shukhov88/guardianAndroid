@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
@@ -50,7 +51,7 @@ public class BaseHelper {
             ((JavascriptExecutor)webDriver).executeScript("arguments[0].click();", element);
         } catch (NoSuchElementException e) {
             debugLogger.error("NoSuchElementException. Locator: " + locator, e);
-            throw e;
+            Assert.fail("Couldn't find element to click: " + locator, e);
         }
 
     }
@@ -67,7 +68,7 @@ public class BaseHelper {
             }
         } catch (NoSuchElementException e) {
             debugLogger.error("NoSuchElementException. Locator: " + locator, e);
-            throw e;
+            Assert.fail("Couldn't find element to type text to: " + locator, e);
         }
     }
 
@@ -82,23 +83,26 @@ public class BaseHelper {
     }*/
 
     public String getText(By locator) {
-        String text;
+        String text = "";
         try {
             text = androidDriver.findElement(locator).getText();
         } catch (NoSuchElementException e) {
             debugLogger.error("NoSuchElementException. Locator: " + locator, e);
-            throw e;
+            Assert.fail("Couldn't find element to get text from: " + locator, e);
         }
         return text;
     }
 
     public void waitForElementPresence(By locator, int seconds) {
+        setImplicitlyWait(0);
         try {
             WebDriverWait wait = new WebDriverWait(androidDriver, seconds);
             wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         } catch (NoSuchElementException e) {
             debugLogger.error("NoSuchElementException. Locator: " + locator, e);
-            throw e;
+            Assert.fail("Waited " + seconds + " sec for element to appear: " + locator, e);
+        } finally {
+            setImplicitlyWait(5);
         }
     }
 
@@ -116,7 +120,7 @@ public class BaseHelper {
             androidDriver.findElement(locator).click();
         } catch (NoSuchElementException e) {
             debugLogger.error("NoSuchElementException. Locator: " + locator, e);
-            throw e;
+            Assert.fail("Couldn't find element to tap: " + locator, e);
         }
     }
 
@@ -125,7 +129,7 @@ public class BaseHelper {
             ((AndroidElement) androidDriver.findElement(locator)).setValue(text);
         } catch (NoSuchElementException e) {
             debugLogger.error("NoSuchElementException. Locator: " + locator, e);
-            throw e;
+            Assert.fail("Couldn't find element to type text to: " + locator, e);
         }
     }
 
@@ -135,7 +139,7 @@ public class BaseHelper {
             contentDescription = androidDriver.findElement(locator).getAttribute("contentDescription");
         } catch (NoSuchElementException e) {
             debugLogger.error("NoSuchElementException. Locator: " + locator, e);
-            throw e;
+            Assert.fail("Couldn't find element to get attribute from: " + locator, e);
         }
         return contentDescription;
     }
