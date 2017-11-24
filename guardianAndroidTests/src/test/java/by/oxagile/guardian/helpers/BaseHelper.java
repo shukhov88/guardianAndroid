@@ -108,6 +108,7 @@ public class BaseHelper {
 
     public void setImplicitlyWait(int seconds) {
         androidDriver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+        logger.debug("AppiumDriver implicitly wait has set to " + seconds);
     }
 
     public boolean isElementPresent(By locator) {
