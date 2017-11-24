@@ -16,7 +16,7 @@ public class AssistHelper extends BaseHelper {
 
     public AssistHelper(AssistManager assist) {
         super(assist);
-        logger.info("AssistHelper initiated");
+        logger.debug("AssistHelper initiated");
     }
 
     Logger logger = LoggerFactory.getLogger(AssistHelper.class);
@@ -52,11 +52,10 @@ public class AssistHelper extends BaseHelper {
             robot.keyRelease(KeyEvent.VK_TAB);
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyRelease(KeyEvent.VK_ENTER);
-            logger.info("Chrome permissions to stream video and audio successfully granted");
+            logger.debug("Chrome permissions to stream video and audio successfully granted");
 
         } catch (AWTException e) {
-            logger.info("Failed to grant chrome permissions to stream video and audio");
-            e.printStackTrace();
+            logger.error("Failed to grant chrome permissions to stream video and audio", e);
         }
     }
 
@@ -68,6 +67,6 @@ public class AssistHelper extends BaseHelper {
 
     public void setWebDriverWait(long seconds) {
         webDriver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
-        logger.info("Webdriver implicitly wait has set to " + seconds);
+        logger.debug("Webdriver implicitly wait has set to " + seconds);
     }
 }

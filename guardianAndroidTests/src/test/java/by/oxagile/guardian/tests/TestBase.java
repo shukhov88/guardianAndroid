@@ -15,9 +15,9 @@ import java.lang.reflect.Method;
 
 public class TestBase {
 
-    protected static final PatientManager patient = new PatientManager();
+    protected static final PatientManager patient = new PatientManager().withDevice("mine");
 
-    protected static final CarerManager carer = new CarerManager();
+    protected static final CarerManager carer = new CarerManager().withDevice("101314");
 
     protected static final AssistManager assist = new AssistManager(System.getProperty("browser", BrowserType.CHROME));
 

@@ -21,7 +21,7 @@ public class CarerManager {
     private CarerHelper carerHelper;
     private LoginHelper loginHelper;
     private CallsHelper callsHelper;
-    private static final Device DEVICE = new ParseDevice().getDevice("101314");
+    private static Device DEVICE;
 
     public AndroidDriver getCarerDriver() {
         if (carerWD == null) {
@@ -89,5 +89,10 @@ public class CarerManager {
             callsHelper = new CallsHelper(this);
         }
         return callsHelper;
+    }
+
+    public CarerManager withDevice(String invent) {
+        DEVICE = new ParseDevice().getDevice(invent);
+        return this;
     }
 }

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -20,12 +21,12 @@ public class CallsHelper extends BaseHelper {
 
     public CallsHelper(CarerManager carerManager) {
         super(carerManager);
-        logger.info("Carer's CallsHelper initiated");
+        logger.debug("Carer's CallsHelper initiated");
     }
 
     public CallsHelper(PatientManager patientManager) {
         super(patientManager);
-        logger.info("Patient's CallsHelper initiated");
+        logger.debug("Patient's CallsHelper initiated");
     }
 
     public void dialTo(String contact) {
@@ -36,7 +37,7 @@ public class CallsHelper extends BaseHelper {
             List<MobileElement> contactsList = androidDriver.findElements(LOCATORS.contactCell);
             if (contactsList.size() == 0) {
                 logger.error("User doesn't have contacts");
-                throw new NoSuchElementException("User doesn't have contacts");
+                Assert.fail("User doesn't have contacts");
             } else {
                 boolean isContactPresent = false;
                 for (int i = 0; i < contactsList.size(); i++) {
@@ -49,7 +50,7 @@ public class CallsHelper extends BaseHelper {
                 }
                 if (!isContactPresent) {
                     logger.error("User doesn't have contact with name = " + contact);
-                    throw new NoSuchElementException("User doesn't have contact with name = " + contact);
+                    Assert.fail("User doesn't have contact with name = " + contact);
                 }
             }
             tap(LOCATORS.startCallButton);
@@ -119,7 +120,7 @@ public class CallsHelper extends BaseHelper {
             }
             if (!isContactPresent) {
                 logger.error("User doesn't have contact with name = " + contact + "at add 3rd party contacts list");
-                throw new NoSuchElementException("User doesn't have contact with name = " + contact + "at add 3rd party contacts list");
+                Assert.fail("User doesn't have contact with name = " + contact + "at add 3rd party contacts list");
             }
         }
         tap(LOCATORS.inviteToCallButton);
@@ -133,25 +134,25 @@ public class CallsHelper extends BaseHelper {
 
     public String getCentralVideoStreamID() {
         waitForElementPresence(LOCATORS.onCallCentralVideoFrame, 5);
-        logger.info("central video frame detected");
+        logger.debug("central video frame detected");
         String id = getContentDescriptionValue(LOCATORS.onCallCentralVideoFrame);
-        logger.info("ID of user that streaming to central video frame extracted");
+        logger.debug("ID of user that streaming to central video frame extracted");
         return id;
     }
 
     public String getTopLeftVideoStreamID() {
         waitForElementPresence(LOCATORS.onCallTopLeftVideoFrame, 5);
-        logger.info("top left video frame detected");
+        logger.debug("top left video frame detected");
         String id = getContentDescriptionValue(LOCATORS.onCallTopLeftVideoFrame);
-        logger.info("ID of user that streaming to top left video frame extracted");
+        logger.debug("ID of user that streaming to top left video frame extracted");
         return id;
     }
 
     public String getTopRightVideoStreamID() {
         waitForElementPresence(LOCATORS.onCallTopRightVideoFrame, 5);
-        logger.info("top right video frame detected");
+        logger.debug("top right video frame detected");
         String id = getContentDescriptionValue(LOCATORS.onCallTopRightVideoFrame);
-        logger.info("ID of user that streaming to top right video frame extracted");
+        logger.debug("ID of user that streaming to top right video frame extracted");
         return id;
     }
 

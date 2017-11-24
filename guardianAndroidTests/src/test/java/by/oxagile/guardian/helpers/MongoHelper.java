@@ -42,13 +42,13 @@ public class MongoHelper {
         BasicDBObject query = new BasicDBObject("_id",new ObjectId(callId));
         FindIterable<Document> call = calls.find(query);
         String status = call.iterator().next().get("status").toString();
-        logger.info("Status of call " + callId + " fetched: " + status);
+        logger.debug("Status of call " + callId + " fetched: " + status);
         return status;
     }
 
 
     public void waitForCallInitiated(String callId) {
-        logger.info("Waiting for call status to become INITIATED");
+        logger.debug("Waiting for call status to become INITIATED");
         while (getCallStatus(callId).equals("REQUESTED")) {
             try {
                 Thread.sleep(1000);
@@ -56,11 +56,11 @@ public class MongoHelper {
                 e.printStackTrace();
             }
         }
-        logger.info("Call status has became INITIATED");
+        logger.debug("Call status has became INITIATED");
     }
 
     public String getLastCallID() {
-        logger.info("Fetching call ID...");
+        logger.debug("Fetching call ID...");
         MongoDatabase db = connection.getDatabase("guardian-assist");
         MongoCollection<org.bson.Document> calls = db.getCollection("calls");
         MongoCursor<org.bson.Document> cursor = calls.find().iterator();
@@ -75,14 +75,14 @@ public class MongoHelper {
         }
         int lastCallID = callIDs.size() - 1;
         String callId = callIDs.get(lastCallID);
-        logger.info("Call ID fetched: " + callId);
+        logger.debug("Call ID fetched: " + callId);
         waitForCallInitiated(callId);
         return callId;
 
     }
 
     public String getLastCallStatus() {
-        logger.info("Fetching call status...");
+        logger.debug("Fetching call status...");
         MongoDatabase db = connection.getDatabase("guardian-assist");
         MongoCollection<org.bson.Document> calls = db.getCollection("calls");
         MongoCursor<org.bson.Document> cursor = calls.find().iterator();
@@ -99,7 +99,7 @@ public class MongoHelper {
 
         JsonElement parsed = new JsonParser().parse(callObjects.get(lastObject).toJson());
         String status = parsed.getAsJsonObject().get("status").getAsString();
-        logger.info("Call status fetched: " + status);
+        logger.debug("Call status fetched: " + status);
         return status;
     }
 }

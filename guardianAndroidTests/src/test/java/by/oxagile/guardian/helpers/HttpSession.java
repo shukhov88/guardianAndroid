@@ -52,7 +52,7 @@ public class HttpSession {
     }
 
     public String joinCall(String callID) throws IOException {
-        logger.info("Fetching TOKEN for ASSIST to join call ID: " + callID);
+        logger.debug("Fetching TOKEN for ASSIST to join call ID: " + callID);
         String json = Request.Get(assist.getProperty("environment.url") + "/v1/calls/" + callID + "/join")
                 .addHeader("Authorization", assist.getProperty("Assist.Token"))
                 .addHeader("Content-Type", "application/json")
@@ -62,7 +62,7 @@ public class HttpSession {
 
         JsonElement parsed = new JsonParser().parse(json);
         String token = parsed.getAsJsonObject().get("token").getAsString();
-        logger.info("TOKEN for ASSIST fetched: " + token);
+        logger.debug("TOKEN for ASSIST fetched: " + token);
         return token;
     }
 
