@@ -21,7 +21,7 @@ public class PatientManager {
     private PatientHelper patientHelper;
     private LoginHelper loginHelper;
     private CallsHelper callsHelper;
-    private static final Device DEVICE = new ParseDevice().getDevice("mine");
+    private static Device DEVICE;
 
     public AndroidDriver getPatientDriver() {
         if (patientWD == null) {
@@ -89,5 +89,10 @@ public class PatientManager {
             callsHelper = new CallsHelper(this);
         }
         return callsHelper;
+    }
+
+    public PatientManager withDevice(String invent) {
+        DEVICE = new ParseDevice().getDevice(invent);
+        return this;
     }
 }

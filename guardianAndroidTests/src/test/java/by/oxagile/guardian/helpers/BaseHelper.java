@@ -98,8 +98,8 @@ public class BaseHelper {
         try {
             WebDriverWait wait = new WebDriverWait(androidDriver, seconds);
             wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        } catch (NoSuchElementException e) {
-            debugLogger.error("NoSuchElementException. Locator: " + locator, e);
+        } catch (Exception e) {
+            debugLogger.error("Exception. Locator: " + locator, e);
             Assert.fail("Waited " + seconds + " sec for element to appear: " + locator, e);
         } finally {
             setImplicitlyWait(5);
