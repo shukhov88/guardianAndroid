@@ -2,6 +2,8 @@ apply plugin: 'java'
 
 repositories {
     mavenCentral()
+    maven { url "http://dl.bintray.com/epam/reportportal" }
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
@@ -16,4 +18,5 @@ dependencies {
     compile 'ru.lanwen.verbalregex:java-verbal-expressions:1.4'
     compile 'commons-net:commons-net:3.6'
     compile 'ch.qos.logback:logback-classic:1.2.3'
+    compile 'com.epam.reportportal:agent-java-testng:3.0.6'
 }

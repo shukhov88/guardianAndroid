@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.epam.reportportal:agent-java-testng:3.0.6">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/guardianAndroidTests/Could not find com.epam.reportportal:agent-java-testng:3.0.6." />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.epam.reportportal/agent-java-testng/3.0.6/d7ad779fea447d81e4822ee7764d9f7333bea85c/agent-java-testng-3.0.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.epam.reportportal/agent-java-testng/3.0.6/292c63b7659123234531310a157482f08b229366/agent-java-testng-3.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -16,5 +16,5 @@ public class LoginHelperLocators {
     By uberOTP = By.id("verificationCode");
     String uberNextButton = "NEXT \uEA88";
     String uberVerifyButton = "VERIFY \uEA88";
-    int permissionsQTY = 4;
+    int permissionsQTY = 5;
 }
